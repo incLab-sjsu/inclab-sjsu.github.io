@@ -15,6 +15,7 @@ rebuilds in about a minute.
 | PI bio, title, links | `_data/people.yml` (the `pi:` block) |
 | Collaborators (R15 team, international) | `_data/collaborators.yml` |
 | Publications | `_data/publications.yml` |
+| Conference presentations | `_data/presentations.yml` |
 | Research themes (home cards and the Research page) | `_data/research.yml` |
 | News items on the home page | `_data/news.yml` |
 | Site title, tagline, contact details, navigation | `_config.yml` |
@@ -27,6 +28,8 @@ Each data file starts with a comment showing the fields and an example entry.
 - People and collaborators: square images, about 600 x 600 px, JPG, saved in
   `assets/img/people/` or `assets/img/collaborators/`. Reference them as
   `photo: /assets/img/people/first-last.jpg`.
+- PI portrait: a 3:4 portrait, about 800 x 1070 px, JPG. To replace it, upload the new file and
+  point `photo:` in `_data/people.yml` at it.
 - Keep files under about 200 KB. Any image editor's "export for web" setting is fine.
 
 ### Adding a publication
@@ -42,6 +45,7 @@ Each data file starts with a comment showing the fields and an example entry.
 ```
 
 Write the PI's name as `Qu H` so it is bolded automatically. `doi` is preferred; `url` works too.
+Write `year` as a plain number without quotes; a quoted year stops the site from building.
 
 ## Deploying on GitHub Pages
 
@@ -65,17 +69,18 @@ Requires Ruby. The `github-pages` gem pins the exact versions GitHub uses (Jekyl
 ```bash
 bundle install
 bundle exec jekyll serve
-# open http://127.0.0.1:4000/incl-lab/
+# open http://127.0.0.1:4000/incl-lab/  (or http://127.0.0.1:4000/ when baseurl is "")
 ```
 
 ## Structure
 
 ```
 _config.yml        site settings, contact details, navigation
-_data/             all editable content (people, collaborators, publications, research, news)
+_data/             all editable content (people, collaborators, publications, presentations, research, news)
 _layouts/          page skeletons
 _includes/         header, footer, member card, publication item
 assets/css/        one stylesheet, no build step
+assets/js/         the mobile menu toggle
 assets/img/logo/   logo files (colour, white, gold; horizontal and square)
 index.html, research.html, people.html, collaborators.html, publications.html, join.html
 ```

@@ -1,5 +1,6 @@
-# Conference presentations shown below the publication list. Same fields as publications,
-# plus `venue` (meeting name and place) and `kind` (Podium or Poster).
+# Conference presentations shown below the publication list.
+# Fields: authors, year (a plain number, no quotes), title, venue (meeting name and place),
+#         kind (Podium or Poster), and optionally doi or url to link the title.
 - authors: "Qu H, Li J, Chou L-S"
   year: 2025
   title: "Age-related differences in mental and physical fatigue effects on working memory and gait balance"

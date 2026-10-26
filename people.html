@@ -8,10 +8,7 @@ permalink: /people/
 <section class="section" id="pi">
   <div class="container pi-profile">
     <div class="pi-profile__photo">
-      <picture>
-        <source srcset="{{ pi.photo | replace: '.jpg', '.webp' | relative_url }}" type="image/webp">
-        <img src="{{ pi.photo | relative_url }}" alt="Portrait of {{ pi.name }}" width="800" height="1068">
-      </picture>
+      <img src="{{ pi.photo | relative_url }}" alt="Portrait of {{ pi.name }}" width="800" height="1068">
     </div>
     <div class="pi-profile__text prose">
       <p class="eyebrow">Principal Investigator</p>
@@ -51,8 +48,8 @@ permalink: /people/
     </ul>
     {%- else %}
     <div class="empty-state">
-      <p><strong>Positions are open.</strong> The lab is recruiting graduate students and undergraduate research
-        assistants for the coming year. See <a href="{{ '/join/' | relative_url }}">Join Us</a> for details.</p>
+      <p><strong>The lab is recruiting</strong> graduate students and undergraduate research assistants.
+        See <a href="{{ '/join/' | relative_url }}">Join Us</a> for details.</p>
     </div>
     {%- endif %}
   </div>

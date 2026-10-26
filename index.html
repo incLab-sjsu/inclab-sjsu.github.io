@@ -27,7 +27,7 @@ permalink: /
   <div class="container">
     <div class="section__head">
       <h2>What we study</h2>
-      <p>Four connected questions run through the lab's work.</p>
+      <p>These connected questions run through the lab's work.</p>
     </div>
     <ul class="grid grid--4 cards">
       {%- for theme in site.data.research %}
@@ -44,10 +44,7 @@ permalink: /
 <section class="section section--elev">
   <div class="container pi-teaser">
     <div class="pi-teaser__photo">
-      <picture>
-        <source srcset="{{ site.data.people.pi.photo | replace: '.jpg', '.webp' | relative_url }}" type="image/webp">
-        <img src="{{ site.data.people.pi.photo | relative_url }}" alt="Portrait of {{ site.data.people.pi.name }}" width="800" height="1068" loading="lazy">
-      </picture>
+      <img src="{{ site.data.people.pi.photo | relative_url }}" alt="Portrait of {{ site.data.people.pi.name }}" width="800" height="1068" loading="lazy">
     </div>
     <div class="pi-teaser__text">
       <p class="eyebrow">Principal Investigator</p>
@@ -59,7 +56,7 @@ permalink: /
   </div>
 </section>
 
-{%- assign news = site.data.news %}
+{%- assign news = site.data.news | sort_natural: "date" | reverse %}
 {%- if news and news.size > 0 %}
 <section class="section">
   <div class="container">

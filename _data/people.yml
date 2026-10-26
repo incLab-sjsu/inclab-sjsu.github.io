@@ -1,6 +1,7 @@
 # People shown on /people/.
 # ---------------------------------------------------------------------------
-# To add a current member, add an entry under `current:` like the commented example.
+# To add a current member, remove the leading "# " from the example lines under `current:` (keep the
+# indentation) and edit them, or paste your own entries in the same shape.
 # Photos: square images (600 x 600 px recommended), saved in assets/img/people/.
 # To move someone to alumni, cut their entry from `current:` and paste it under `alumni:`,
 # adding `years:` and `now:`.
@@ -32,7 +33,7 @@ pi:
       across middle and older age by integrating movement analysis with neuroimaging, in projects funded by the
       National Institute on Aging and the National Institute of Neurological Disorders and Stroke.
     - >-
-      Her current work extends these lines of research toward AI-integrated and wearable health technologies for
+      She is now extending these lines of research toward AI-integrated and wearable health technologies for
       neuromotor assessment in neurodevelopmental and neurodegenerative populations, with the goal of detecting
       decline earlier and supporting independent movement. At SJSU she teaches KIN 165 Motor Development and
       KIN 166 Motor Learning, and is building a team of graduate and undergraduate students for human-participant
@@ -43,8 +44,7 @@ pi:
     - MS, Biomechanics and Sports Medicine, University of Tennessee, Knoxville
     - BS, Kinesiology, Shanghai University of Sport
 
-current: []
-# current:
+current:
 #   - name: First Last
 #     role: MS student, Kinesiology
 #     photo: /assets/img/people/first-last.jpg
@@ -53,8 +53,7 @@ current: []
 #   - name: First Last
 #     role: Undergraduate research assistant
 
-alumni: []
-# alumni:
+alumni:
 #   - name: First Last
 #     role: MS student
 #     years: 2026 to 2028

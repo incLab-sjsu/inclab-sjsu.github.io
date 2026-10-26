@@ -1,5 +1,5 @@
 # Publications shown on /publications/, grouped by year automatically (newest first).
-# Fields: authors (write the PI as "Qu H" so it is bolded), year, title, journal, volume, pages,
+# Fields: authors (write the PI as "Qu H" so it is bolded), year (a plain number, no quotes), title, journal, volume, pages,
 #         doi (preferred) or url, note (optional, shown after the citation),
 #         links (optional list of {label, url}, e.g. open-access copy, lay summary, data).
 # Years follow the version of record; "note" records online-first dates.
