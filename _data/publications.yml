@@ -8,11 +8,21 @@
   title: "Impact of physical fatigue on lower-limb inter-joint coordination during overground and treadmill walking"
   journal: World Scientific Annual Review of Biomechanics
   doi: 10.1142/S2810958926500019
+  note: "In press."
+
+- authors: "Shafer RL, Wang J, Qu H, Simpson JP, Terza M, Shirley DJ, McKinney WS, Pulver S, Orlando A-M, Romero RA, Karmakar B, Mosconi MW, Wang Z"
+  year: 2026
+  title: "Gait variability development in autistic individuals across childhood and adulthood"
+  journal: Research Square
+  doi: 10.21203/rs.3.rs-9622252/v1
+  note: "Preprint, not yet peer reviewed."
 
 - authors: "Wang Z, Qu H, Christensen D, Gemmell HM, Parks E, Wetherington KE, Orlando A-M, Romero RA, Karmakar B, Vaillancourt DE"
   year: 2026
   title: "Atypical visually guided precision grip control in middle-aged and older autistic adults"
   journal: Autism Research
+  volume: "19(2)"
+  pages: "e70154"
   doi: 10.1002/aur.70154
   note: "Hang Qu and Danielle Christensen contributed equally. Online ahead of print, December 2025."
   links:
@@ -23,6 +33,8 @@
   year: 2026
   title: "Disruption of ankle control strategies by exercise-induced fatigue during stair descent in athletes with chronic ankle instability"
   journal: Archives of Physical Medicine and Rehabilitation
+  volume: "107(7)"
+  pages: "1526-1534"
   doi: 10.1016/j.apmr.2025.10.020
   note: "Online ahead of print, November 2025."
 
@@ -52,4 +64,5 @@
   title: "Effects of synthetic turf and shock pad on impact attenuation related biomechanics during drop landing"
   journal: Sports Biomechanics
   volume: "21(6)"
+  pages: "748-760"
   doi: 10.1080/14763141.2019.1690570
