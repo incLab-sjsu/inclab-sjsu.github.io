@@ -1,0 +1,19 @@
+# Conference presentations shown below the publication list. Same fields as publications,
+# plus `venue` (meeting name and place) and `kind` (Podium or Poster).
+- authors: "Qu H, Li J, Chou L-S"
+  year: 2025
+  title: "Age-related differences in mental and physical fatigue effects on working memory and gait balance"
+  venue: "XXX Congress of the International Society of Biomechanics, Stockholm, Sweden"
+  kind: Podium
+
+- authors: "Qu H, Li J, Chou L-S"
+  year: 2025
+  title: "Age-specific adaptations to mental fatigue in dual-task walking of varying complexity"
+  venue: "49th Annual Meeting of the American Society of Biomechanics, Pittsburgh, PA"
+  kind: Podium
+
+- authors: "Li J, Qu H, Chou L-S"
+  year: 2024
+  title: "Effects of physical fatigue on lower limb inter-joint coordination under different walking conditions"
+  venue: "Annual Meeting of the American Society of Biomechanics"
+  kind: Poster

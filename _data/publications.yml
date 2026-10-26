@@ -1,8 +1,55 @@
-# Publications shown on /publications/, grouped by year automatically.
-# Fields: authors (use "Qu H" so it is bolded), year, title, journal, volume, pages, doi (preferred) or url, note.
-- authors: "Qu H, Wang Z"
+# Publications shown on /publications/, grouped by year automatically (newest first).
+# Fields: authors (write the PI as "Qu H" so it is bolded), year, title, journal, volume, pages,
+#         doi (preferred) or url, note (optional, shown after the citation),
+#         links (optional list of {label, url}, e.g. open-access copy, lay summary, data).
+# Years follow the version of record; "note" records online-first dates.
+- authors: "Li J, Qu H, Chou L-S"
+  year: 2026
+  title: "Impact of physical fatigue on lower-limb inter-joint coordination during overground and treadmill walking"
+  journal: World Scientific Annual Review of Biomechanics
+  doi: 10.1142/S2810958926500019
+
+- authors: "Wang Z, Qu H, Christensen D, Gemmell HM, Parks E, Wetherington KE, Orlando A-M, Romero RA, Karmakar B, Vaillancourt DE"
+  year: 2026
+  title: "Atypical visually guided precision grip control in middle-aged and older autistic adults"
+  journal: Autism Research
+  doi: 10.1002/aur.70154
+  note: "Hang Qu and Danielle Christensen contributed equally. Online ahead of print, December 2025."
+  links:
+    - label: Open access (PMC)
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12931594/
+
+- authors: "Wang A, Qu H, Wang L, Chen X, Zhu W, Sun Y"
+  year: 2026
+  title: "Disruption of ankle control strategies by exercise-induced fatigue during stair descent in athletes with chronic ankle instability"
+  journal: Archives of Physical Medicine and Rehabilitation
+  doi: 10.1016/j.apmr.2025.10.020
+  note: "Online ahead of print, November 2025."
+
+- authors: "Qu H, Wang J, Shirley DJ, Gemmell HM, Christensen D, Orlando A-M, Romero RA, Zielinski BA, Wang Z"
   year: 2025
   title: "Atypical postural control variability and coordination persist into middle and older adulthood in autism spectrum disorder"
   journal: Autism Research
-  doi: ""
-  note: ""
+  volume: "18(4)"
+  pages: "752-764"
+  doi: 10.1002/aur.70024
+  links:
+    - label: Open access (PMC)
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12015802/
+    - label: Lay summary by SPARK
+      url: https://sparkforautism.org/discover_article/rm-balance-movement/
+
+- authors: "Kim HK, Qu H, Chou L-S"
+  year: 2024
+  title: "Center of mass motion and plantar pressure distribution during walking in overweight individuals"
+  journal: Gait & Posture
+  volume: "108"
+  pages: "307-312"
+  doi: 10.1016/j.gaitpost.2024.01.003
+
+- authors: "Qu H, Zhang S, Sorochan JC, Weinhandl JT, Thoms AW, Dickson KH"
+  year: 2022
+  title: "Effects of synthetic turf and shock pad on impact attenuation related biomechanics during drop landing"
+  journal: Sports Biomechanics
+  volume: "21(6)"
+  doi: 10.1080/14763141.2019.1690570

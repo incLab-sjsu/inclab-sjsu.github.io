@@ -52,12 +52,13 @@
 
 - id: intelligent-assessment
   title: Intelligent movement assessment
-  summary: Data-driven tools to quantify neuromotor function precisely, and eventually beyond the laboratory.
+  summary: AI-integrated and wearable technologies to assess neuromotor function precisely, and beyond the laboratory.
   details:
     - >-
-      Laboratory assessments are precise but reach few people. We are working toward analysis methods and
-      sensor-based tools that capture the informative features of balance and gait more efficiently, so that
-      neuromotor function can be tracked over time and in the settings where people actually live and move.
+      Laboratory assessments are precise but reach few people. We are working toward AI-integrated analysis
+      methods and wearable health technologies that capture the informative features of balance and gait more
+      efficiently, so that neuromotor function can be tracked over time and in the settings where people
+      actually live and move.
   questions:
     - Which features of posture and gait are most informative about underlying neural control?
-    - How can data-driven methods turn rich movement recordings into interpretable, clinically useful measures?
+    - How can machine learning and wearable sensing turn rich movement recordings into interpretable, clinically useful measures?

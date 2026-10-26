@@ -19,5 +19,21 @@ permalink: /publications/
       {%- endfor %}
     </ol>
     {%- endfor %}
+
+    {%- assign talks = site.data.presentations %}
+    {%- if talks and talks.size > 0 %}
+    <h2 class="pub-section-title">Conference presentations</h2>
+    <ol class="pub-list">
+      {%- assign talks_sorted = talks | sort: "year" | reverse %}
+      {%- for t in talks_sorted %}
+      <li class="pub">
+        <span class="pub__authors">{{ t.authors | replace: "Qu H", "<strong>Qu H</strong>" }}</span>
+        ({{ t.year }}).
+        <span class="pub__title">{{ t.title }}</span>
+        {% if t.kind %}{{ t.kind }}, {% endif %}<em class="pub__venue">{{ t.venue }}</em>.
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
   </div>
 </section>

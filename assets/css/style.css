@@ -266,6 +266,7 @@ strong { font-weight: 700; }
 
 /* Publications ----------------------------------------------------------- */
 .pub-scholar { margin-bottom: 2rem; }
+.pub-section-title { font-size: var(--step-2); margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
 .pub-year { font-size: var(--step-2); border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 0.15em; margin-top: 1.5rem; }
 .pub-list { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 1rem; }
 .pub { padding-left: 1rem; border-left: 3px solid var(--blue-tint); }
@@ -275,6 +276,9 @@ strong { font-weight: 700; }
 .pub__title a:hover { text-decoration: underline; }
 .pub__venue { color: var(--ink-2); }
 .pub__note { display: inline-block; font-size: var(--step--1); color: var(--ink-3); margin-left: 0.25rem; }
+.pub__links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; font-size: var(--step--1); }
+.pub__links a { border: 1px solid var(--rule); background: var(--bg-elev); border-radius: 999px; padding: 0.15em 0.7em; text-decoration: none; }
+.pub__links a:hover { border-color: var(--blue); }
 
 /* Join page -------------------------------------------------------------- */
 .join-grid { display: grid; gap: 2.5rem; align-items: start; }
