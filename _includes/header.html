@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <picture>
+        <source type="image/webp"
+                srcset="{{ '/assets/img/logo/incl-horizontal-color-640.webp' | relative_url }} 640w, {{ '/assets/img/logo/incl-horizontal-color-1280.webp' | relative_url }} 1280w"
+                sizes="(max-width: 640px) 210px, 280px">
+        <img src="{{ '/assets/img/logo/incl-horizontal-color-640.png' | relative_url }}"
+             srcset="{{ '/assets/img/logo/incl-horizontal-color-640.png' | relative_url }} 640w, {{ '/assets/img/logo/incl-horizontal-color-1280.png' | relative_url }} 1280w"
+             sizes="(max-width: 640px) 210px, 280px"
+             width="640" height="224" alt="{{ site.title }}, home">
+      </picture>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span class="nav-toggle__label">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        {%- for item in site.nav %}
+        <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,63 @@
+# Research themes. Shown as cards on the home page and as full sections on /research/.
+# Each theme: id (used in the URL anchor), title, summary (one sentence), details (paragraphs), questions (bullets).
+- id: aging-fatigue
+  title: Aging, fatigue, and fall risk
+  summary: How fatigue and aging change gait, balance, and the brain activity that supports them.
+  details:
+    - >-
+      Falls are a leading cause of injury in older adults, and many happen late in the day or after sustained
+      activity, when people are tired. We study how fatigue alters the way older adults stand and walk, and how
+      the brain's control of those tasks shifts as the body tires.
+    - >-
+      Understanding this interaction helps explain why some older adults remain stable under fatigue while others
+      do not, and points toward assessments that capture fall risk under realistic, everyday conditions rather
+      than only when people are fresh.
+  questions:
+    - How do fatigue and aging interact to change gait and postural stability?
+    - Which changes in cortical activity during walking and balance signal declining control?
+    - Can fatigue-sensitive measures identify fall risk earlier than standard clinical tests?
+
+- id: autism-adulthood
+  title: Autism across adulthood
+  summary: Motor and neurocognitive function in autistic adults in middle and older age.
+  details:
+    - >-
+      Motor differences are among the earliest and most consistent features of autism, yet almost everything we know
+      about them comes from children. Autistic adults are now reaching middle and older age in large numbers, and
+      their motor and cognitive health in later life is poorly understood.
+    - >-
+      We characterize postural control, coordination, and related neurocognitive function in autistic adults across
+      the adult lifespan, asking whether early-life motor differences persist, change, or interact with the effects
+      of aging.
+  questions:
+    - Do atypical patterns of postural control and coordination persist into middle and older adulthood in autism?
+    - How do motor and cognitive changes with age differ between autistic and non-autistic adults?
+    - Which motor measures could support health monitoring and intervention for aging autistic adults?
+
+- id: brain-movement
+  title: Brain and behavior in movement control
+  summary: Cortical activity during posture and gait, and what movement variability reveals about neural control.
+  details:
+    - >-
+      Standing and walking are not automatic in the way they feel. The cortex is actively involved, especially when
+      balance is challenged, attention is divided, or the body is fatigued. We record brain activity while people
+      perform balance and walking tasks to understand how this involvement changes with age and condition.
+    - >-
+      We also treat the moment-to-moment variability and coordination of movement as a signal in its own right.
+      The structure of that variability carries information about how the nervous system is organizing control
+      that averaged measures cannot show.
+  questions:
+    - How does cortical involvement in balance and gait change with age, fatigue, and neurodevelopmental condition?
+    - What do variability and coordination patterns reveal about the flexibility of neuromotor control?
+
+- id: intelligent-assessment
+  title: Intelligent movement assessment
+  summary: Data-driven tools to quantify neuromotor function precisely, and eventually beyond the laboratory.
+  details:
+    - >-
+      Laboratory assessments are precise but reach few people. We are working toward analysis methods and
+      sensor-based tools that capture the informative features of balance and gait more efficiently, so that
+      neuromotor function can be tracked over time and in the settings where people actually live and move.
+  questions:
+    - Which features of posture and gait are most informative about underlying neural control?
+    - How can data-driven methods turn rich movement recordings into interpretable, clinically useful measures?

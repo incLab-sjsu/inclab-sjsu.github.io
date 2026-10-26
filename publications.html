@@ -1,0 +1,23 @@
+---
+title: Publications
+eyebrow: Selected work
+lede: Peer-reviewed articles from the lab and from Dr. Qu's prior training. For the complete and most current list, see Google Scholar.
+permalink: /publications/
+---
+<section class="section">
+  <div class="container prose-wide">
+    <p class="pub-scholar"><a class="btn btn--ghost" href="{{ site.contact.scholar_url }}">View all on Google Scholar</a></p>
+    {%- assign pubs = site.data.publications | sort: "year" | reverse %}
+    {%- assign years = pubs | map: "year" | uniq %}
+    {%- for year in years %}
+    <h2 class="pub-year" id="y{{ year }}">{{ year }}</h2>
+    <ol class="pub-list">
+      {%- for pub in pubs %}
+      {%- if pub.year == year %}
+      {%- include pub-item.html pub=pub %}
+      {%- endif %}
+      {%- endfor %}
+    </ol>
+    {%- endfor %}
+  </div>
+</section>

@@ -1,0 +1,23 @@
+{%- assign p = include.person -%}
+{%- assign parts = p.name | split: " " -%}
+<li class="card member-card{% if p.placeholder %} member-card--placeholder{% endif %}">
+  <div class="avatar" aria-hidden="true">
+    {%- if p.photo %}
+    <img src="{{ p.photo | relative_url }}" alt="" width="320" height="320" loading="lazy">
+    {%- elsif p.placeholder %}
+    <span class="avatar__placeholder"></span>
+    {%- else %}
+    <span class="avatar__initials">{{ parts.first | slice: 0 }}{% if parts.size > 1 %}{{ parts.last | slice: 0 }}{% endif %}</span>
+    {%- endif %}
+  </div>
+  <div class="member-card__body">
+    <h3 class="member-card__name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
+    {%- if p.role %}<p class="member-card__role">{{ p.role }}</p>{% endif %}
+    {%- if p.institution %}<p class="member-card__meta">{{ p.institution }}</p>{% endif %}
+    {%- if p.program %}<p class="member-card__meta">{{ p.program }}</p>{% endif %}
+    {%- if p.years %}<p class="member-card__meta">{{ p.years }}</p>{% endif %}
+    {%- if p.now %}<p class="member-card__meta">Now: {{ p.now }}</p>{% endif %}
+    {%- if p.bio %}<p class="member-card__bio">{{ p.bio }}</p>{% endif %}
+    {%- if p.email %}<p class="member-card__links"><a href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+  </div>
+</li>

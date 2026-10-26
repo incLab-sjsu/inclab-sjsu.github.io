@@ -1,0 +1,54 @@
+# People shown on /people/.
+# ---------------------------------------------------------------------------
+# To add a current member, add an entry under `current:` like the commented example.
+# Photos: square images (600 x 600 px recommended), saved in assets/img/people/.
+# To move someone to alumni, cut their entry from `current:` and paste it under `alumni:`,
+# adding `years:` and `now:`.
+# ---------------------------------------------------------------------------
+pi:
+  name: Hang Qu, PhD
+  role: Principal Investigator
+  title: Assistant Professor of Motor Behavior
+  department: Department of Kinesiology, San José State University
+  photo: /assets/img/people/hang-qu.jpg
+  email: hang.qu@sjsu.edu
+  office: Spartan Complex 164
+  links:
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=Qzs6XVkAAAAJ
+    - label: SJSU faculty page
+      url: https://www.sjsu.edu/people/hang.qu/
+  bio:
+    - >-
+      Dr. Hang Qu is an Assistant Professor of Motor Behavior in the Department of Kinesiology at San José State
+      University and directs the Intelligent Neuromotor Control Lab. Dr. Qu's research asks how the nervous system
+      controls movement, and how that control changes with aging, fatigue, and neurodevelopmental conditions such as
+      autism.
+    - >-
+      Dr. Qu earned a PhD in Motor Control and Biomechanics from Iowa State University, where the doctoral work
+      examined how fatigue affects gait, balance, and cortical activity in older adults. Dr. Qu then completed
+      postdoctoral training in the Neurocognitive and Behavioral Development Lab at the University of Florida,
+      studying motor and neurocognitive function in autistic adults in middle and older age.
+    - >-
+      At SJSU, Dr. Qu teaches in the motor behavior area and mentors graduate and undergraduate students in
+      human-participant research on balance, gait, and the brain.
+  education:
+    - Postdoctoral training, Neurocognitive and Behavioral Development Lab, University of Florida
+    - PhD, Motor Control and Biomechanics, Iowa State University
+
+current: []
+# current:
+#   - name: First Last
+#     role: MS student, Kinesiology
+#     photo: /assets/img/people/first-last.jpg
+#     email: first.last@sjsu.edu
+#     bio: One sentence on what they work on.
+#   - name: First Last
+#     role: Undergraduate research assistant
+
+alumni: []
+# alumni:
+#   - name: First Last
+#     role: MS student
+#     years: 2026 to 2028
+#     now: PhD student, University of X

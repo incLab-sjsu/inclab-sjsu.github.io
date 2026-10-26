@@ -1,0 +1,86 @@
+# ---------------------------------------------------------------------------
+# Intelligent Neuromotor Control Lab (INCL) website
+# Jekyll site built natively by GitHub Pages ("Deploy from a branch").
+# Edit the values below, commit, and GitHub rebuilds the site in about a minute.
+# ---------------------------------------------------------------------------
+title: Intelligent Neuromotor Control Lab
+short_title: INCL
+tagline: Understanding how the nervous system controls movement across the lifespan
+description: >-
+  The Intelligent Neuromotor Control Lab (INCL) at San José State University studies how the
+  nervous system controls posture, gait, and balance, and how that control changes with aging,
+  fatigue, and neurodevelopmental conditions such as autism.
+lang: en
+timezone: America/Los_Angeles
+logo: /assets/img/favicon/icon-512.png
+
+# DEPLOYMENT ADDRESS ---------------------------------------------------------
+# Project site under a personal account:  https://quhang1992.github.io/incl-lab/
+#   url: "https://quhang1992.github.io"   baseurl: "/incl-lab"
+# Organization root site:                 https://incl-sjsu.github.io/
+#   url: "https://incl-sjsu.github.io"    baseurl: ""
+# Custom domain (after adding a CNAME file): url: "https://incl.example.org"  baseurl: ""
+url: "https://quhang1992.github.io"
+baseurl: "/incl-lab"
+
+author:
+  name: Hang Qu
+
+# Contact details used in the footer and on the Join page
+contact:
+  pi_name: Hang Qu, PhD
+  email: hang.qu@sjsu.edu
+  office: Spartan Complex 164
+  department: Department of Kinesiology
+  institution: San José State University
+  address_line1: One Washington Square
+  address_line2: San José, CA 95192-0054
+  maps_url: https://www.google.com/maps/search/?api=1&query=Spartan+Complex%2C+San+Jos%C3%A9+State+University
+  scholar_url: https://scholar.google.com/citations?user=Qzs6XVkAAAAJ
+  faculty_url: https://www.sjsu.edu/people/hang.qu/
+  department_url: https://www.sjsu.edu/kinesiology/
+
+# Primary navigation (order matters)
+nav:
+  - title: Research
+    url: /research/
+  - title: People
+    url: /people/
+  - title: Collaborators
+    url: /collaborators/
+  - title: Publications
+    url: /publications/
+  - title: Join Us
+    url: /join/
+
+# No Jekyll theme: layouts and CSS live in this repository. `theme: null` stops GitHub Pages
+# from applying its default Primer theme, which would otherwise overwrite assets/css/style.css.
+theme: null
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: /assets/img/og-image.jpg
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - HANDOFF.md
+  - LICENSE
+  - vendor
+  - node_modules
+  - scripts
+  - .ruby-version

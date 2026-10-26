@@ -1,0 +1,12 @@
+{%- assign pub = include.pub -%}
+<li class="pub">
+  <span class="pub__authors">{{ pub.authors | replace: "Qu H", "<strong>Qu H</strong>" }}</span>
+  ({{ pub.year }}).
+  <span class="pub__title">
+    {%- if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a>
+    {%- elsif pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>
+    {%- else %}{{ pub.title }}{% endif -%}
+  </span>
+  <em class="pub__venue">{{ pub.journal }}</em>{% if pub.volume %}, {{ pub.volume }}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.
+  {%- if pub.note %} <span class="pub__note">{{ pub.note }}</span>{% endif %}
+</li>

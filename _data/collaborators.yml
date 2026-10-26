@@ -1,0 +1,38 @@
+# Collaborators shown on /collaborators/, in groups.
+# ---------------------------------------------------------------------------
+# Each member: name, institution, role (their role on the project or their title),
+# photo (square, 600 x 600 px recommended, saved in assets/img/collaborators/), url (lab or profile page).
+# Entries with `placeholder: true` render as dashed "add collaborator" cards. Delete them once real entries exist.
+# ---------------------------------------------------------------------------
+groups:
+  - id: r15
+    title: R15 project team
+    intro: >-
+      Collaborators on the lab's NIH-funded R15 project.
+    members:
+      - name: Collaborator name
+        institution: Institution
+        role: Co-Investigator
+        placeholder: true
+      - name: Collaborator name
+        institution: Institution
+        role: Co-Investigator
+        placeholder: true
+      - name: Collaborator name
+        institution: Institution
+        role: Consultant
+        placeholder: true
+
+  - id: international
+    title: International collaborators
+    intro: >-
+      Colleagues abroad with whom we share data, methods, and students.
+    members:
+      - name: Collaborator name
+        institution: Institution, Country
+        role: Collaborating investigator
+        placeholder: true
+      - name: Collaborator name
+        institution: Institution, Country
+        role: Collaborating investigator
+        placeholder: true

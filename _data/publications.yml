@@ -1,0 +1,8 @@
+# Publications shown on /publications/, grouped by year automatically.
+# Fields: authors (use "Qu H" so it is bolded), year, title, journal, volume, pages, doi (preferred) or url, note.
+- authors: "Qu H, Wang Z"
+  year: 2025
+  title: "Atypical postural control variability and coordination persist into middle and older adulthood in autism spectrum disorder"
+  journal: Autism Research
+  doi: ""
+  note: ""

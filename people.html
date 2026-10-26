@@ -1,0 +1,79 @@
+---
+title: People
+eyebrow: Who we are
+lede: The lab is led by Dr. Hang Qu and is growing. We are actively recruiting students who want to study how the nervous system controls movement.
+permalink: /people/
+---
+{%- assign pi = site.data.people.pi %}
+<section class="section" id="pi">
+  <div class="container pi-profile">
+    <div class="pi-profile__photo">
+      <picture>
+        <source srcset="{{ pi.photo | replace: '.jpg', '.webp' | relative_url }}" type="image/webp">
+        <img src="{{ pi.photo | relative_url }}" alt="Portrait of {{ pi.name }}" width="800" height="1068">
+      </picture>
+    </div>
+    <div class="pi-profile__text prose">
+      <p class="eyebrow">Principal Investigator</p>
+      <h2>{{ pi.name }}</h2>
+      <p class="pi-profile__title">{{ pi.title }}<br>{{ pi.department }}</p>
+      {%- for para in pi.bio %}
+      <p>{{ para }}</p>
+      {%- endfor %}
+      <h3>Education and training</h3>
+      <ul>
+        {%- for e in pi.education %}
+        <li>{{ e }}</li>
+        {%- endfor %}
+      </ul>
+      <ul class="pi-profile__links">
+        <li><a href="mailto:{{ pi.email }}">{{ pi.email }}</a></li>
+        <li>{{ pi.office }}</li>
+        {%- for l in pi.links %}
+        <li><a href="{{ l.url }}">{{ l.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--elev" id="current">
+  <div class="container">
+    <div class="section__head">
+      <h2>Current members</h2>
+    </div>
+    {%- assign current = site.data.people.current %}
+    {%- if current and current.size > 0 %}
+    <ul class="grid grid--3 cards">
+      {%- for person in current %}
+      {%- include member-card.html person=person %}
+      {%- endfor %}
+    </ul>
+    {%- else %}
+    <div class="empty-state">
+      <p><strong>Positions are open.</strong> The lab is recruiting graduate students and undergraduate research
+        assistants for the coming year. See <a href="{{ '/join/' | relative_url }}">Join Us</a> for details.</p>
+    </div>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="section" id="alumni">
+  <div class="container">
+    <div class="section__head">
+      <h2>Alumni</h2>
+    </div>
+    {%- assign alumni = site.data.people.alumni %}
+    {%- if alumni and alumni.size > 0 %}
+    <ul class="grid grid--3 cards">
+      {%- for person in alumni %}
+      {%- include member-card.html person=person %}
+      {%- endfor %}
+    </ul>
+    {%- else %}
+    <div class="empty-state">
+      <p>Former members of the lab will be listed here.</p>
+    </div>
+    {%- endif %}
+  </div>
+</section>

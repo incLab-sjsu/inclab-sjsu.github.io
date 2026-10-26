@@ -1,0 +1,93 @@
+---
+layout: default
+body_class: home
+permalink: /
+---
+<section class="hero night">
+  <picture class="hero__constellation" aria-hidden="true">
+    <source type="image/webp" srcset="{{ '/assets/img/logo/incl-constellation-gold.webp' | relative_url }}">
+    <img src="{{ '/assets/img/logo/incl-constellation-gold.png' | relative_url }}" alt="" width="784" height="559">
+  </picture>
+  <div class="container">
+    <div class="hero__text">
+      <p class="eyebrow">{{ site.contact.institution }} &middot; {{ site.contact.department }}</p>
+      <h1>{{ site.tagline }}</h1>
+      <p class="lede">We study how the brain and body work together to keep us upright and moving, and how that
+        control changes with age, fatigue, and neurodevelopmental conditions such as autism. Our goal is better ways to
+        measure neuromotor function, and ultimately to support safe, independent movement across the lifespan.</p>
+      <div class="hero__actions">
+        <a class="btn btn--gold" href="{{ '/research/' | relative_url }}">Explore our research</a>
+        <a class="btn btn--ghost" href="{{ '/join/' | relative_url }}">Join the lab</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>What we study</h2>
+      <p>Four connected questions run through the lab's work.</p>
+    </div>
+    <ul class="grid grid--4 cards">
+      {%- for theme in site.data.research %}
+      <li class="card theme-card">
+        <span class="theme-card__index" aria-hidden="true">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
+        <h3><a href="{{ '/research/' | relative_url }}#{{ theme.id }}">{{ theme.title }}</a></h3>
+        <p>{{ theme.summary }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--elev">
+  <div class="container pi-teaser">
+    <div class="pi-teaser__photo">
+      <picture>
+        <source srcset="{{ site.data.people.pi.photo | replace: '.jpg', '.webp' | relative_url }}" type="image/webp">
+        <img src="{{ site.data.people.pi.photo | relative_url }}" alt="Portrait of {{ site.data.people.pi.name }}" width="800" height="1068" loading="lazy">
+      </picture>
+    </div>
+    <div class="pi-teaser__text">
+      <p class="eyebrow">Principal Investigator</p>
+      <h2>{{ site.data.people.pi.name }}</h2>
+      <p class="pi-teaser__title">{{ site.data.people.pi.title }}, {{ site.data.people.pi.department }}</p>
+      <p>{{ site.data.people.pi.bio[0] }}</p>
+      <p><a class="link-arrow" href="{{ '/people/' | relative_url }}">Meet the team</a></p>
+    </div>
+  </div>
+</section>
+
+{%- assign news = site.data.news %}
+{%- if news and news.size > 0 %}
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>News</h2>
+    </div>
+    <ul class="news-list">
+      {%- for item in news limit: 5 %}
+      <li class="news-item">
+        <time datetime="{{ item.date }}">{{ item.date | date: "%B %-d, %Y" }}</time>
+        <p>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section section--cta">
+  <div class="container">
+    <div class="cta-panel night">
+      <div class="cta-panel__inner">
+        <div>
+          <h2>Work with us</h2>
+          <p>We welcome graduate students, undergraduate research assistants, and community members interested in taking part in our studies.</p>
+        </div>
+        <a class="btn btn--gold" href="{{ '/join/' | relative_url }}">How to get involved</a>
+      </div>
+    </div>
+  </div>
+</section>

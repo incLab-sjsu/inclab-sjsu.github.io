@@ -1,0 +1,26 @@
+---
+title: Collaborators
+eyebrow: Our network
+lede: Our research is collaborative by design. We work with investigators across institutions and countries who share our interest in neuromotor control across the lifespan.
+permalink: /collaborators/
+---
+{%- for group in site.data.collaborators.groups %}
+<section class="section{% cycle '', ' section--elev' %}" id="{{ group.id }}">
+  <div class="container">
+    <div class="section__head">
+      <h2>{{ group.title }}</h2>
+      {%- if group.intro %}<p>{{ group.intro }}</p>{% endif %}
+    </div>
+    {%- assign members = group.members %}
+    {%- if members and members.size > 0 %}
+    <ul class="grid grid--3 cards">
+      {%- for person in members %}
+      {%- include member-card.html person=person %}
+      {%- endfor %}
+    </ul>
+    {%- else %}
+    <div class="empty-state"><p>Collaborators will be listed here.</p></div>
+    {%- endif %}
+  </div>
+</section>
+{%- endfor %}
