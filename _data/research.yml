@@ -17,22 +17,22 @@
     - Which changes in cortical activity during walking and balance signal declining control?
     - Can fatigue-sensitive measures identify fall risk earlier than standard clinical tests?
 
-- id: autism-adulthood
-  title: Autism across adulthood
-  summary: Motor and neurocognitive function in autistic adults in middle and older age.
+- id: neurodiversity-neurodegeneration
+  title: Neurodiversity and neurodegeneration across the lifespan
+  summary: Motor and neurocognitive function in neurodivergent adults (such as autism and Down syndrome) and in conditions that change the nervous system with age.
   details:
     - >-
-      Motor differences are common in autism and are present from early childhood, yet most of what we know
-      about them comes from studies of children. Autistic adults are now reaching middle and older age in large numbers, and
-      their motor and cognitive health in later life is poorly understood.
+      Motor differences are common in neurodevelopmental conditions and are present from early childhood, yet most
+      of what we know about them comes from studies of children. Neurodivergent adults are now reaching middle and
+      older age in large numbers, and their motor and cognitive health in later life is poorly understood.
     - >-
-      We characterize postural control, coordination, and related neurocognitive function in autistic adults across
-      the adult lifespan, asking whether early-life motor differences persist, change, or interact with the effects
-      of aging.
+      We characterize postural control, coordination, and related neurocognitive function across the adult
+      lifespan, asking whether early-life motor differences persist, change, or interact with the effects of aging
+      and neurodegeneration.
   questions:
-    - Do atypical patterns of postural control and coordination persist into middle and older adulthood in autism?
-    - How do motor and cognitive changes with age differ between autistic and non-autistic adults?
-    - Which motor measures could support health monitoring and intervention for aging autistic adults?
+    - Do atypical patterns of postural control and coordination persist into middle and older adulthood in neurodivergent adults?
+    - How do motor and cognitive changes with age differ between neurodivergent and neurotypical adults, and how do neurodegenerative processes alter neuromotor control?
+    - Which motor measures could support health monitoring and intervention for aging neurodivergent adults?
 
 - id: brain-movement
   title: Brain and behavior in movement control
@@ -48,7 +48,7 @@
       The structure of that variability carries information about how the nervous system is organizing control
       that averaged measures cannot show.
   questions:
-    - How does cortical involvement in balance and gait change with age, fatigue, and neurodevelopmental condition?
+    - How does cortical involvement in balance and gait change with age, fatigue, neurodegeneration, and neurodiversity?
     - What do variability and coordination patterns reveal about the flexibility of neuromotor control?
 
 - id: intelligent-assessment
@@ -60,6 +60,9 @@
       methods and wearable health technologies that capture the informative features of balance and gait more
       efficiently, so that neuromotor function can be tracked over time and in the settings where people
       actually live and move, in both neurodevelopmental and neurodegenerative populations.
+    - >-
+      With collaborators in biomechanics and engineering at SJSU, we are also applying wearable insole sensing and
+      machine learning to detect movement signatures of musculoskeletal pain.
   questions:
     - Which features of posture and gait are most informative about underlying neural control?
     - How can machine learning and wearable sensing turn rich movement recordings into interpretable, clinically useful measures?

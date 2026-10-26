@@ -1,38 +1,52 @@
 # Collaborators shown on /collaborators/, in groups.
 # ---------------------------------------------------------------------------
-# Each member: name, institution, role (their role on the project or their title),
-# photo (square, 600 x 600 px recommended, saved in assets/img/collaborators/), url (lab or profile page).
-# Entries with `placeholder: true` render as dashed "add collaborator" cards. Delete them once real entries exist.
+# Each member: name, role (their role on the project, or their title), program (academic title, optional),
+# institution, photo (square, 600 x 600 px recommended, saved in assets/img/collaborators/), url (profile page).
+# A member without a photo shows their initials. Entries with `placeholder: true` render as dashed cards.
 # ---------------------------------------------------------------------------
 groups:
   - id: r15
     title: R15 project team
     intro: >-
-      Collaborators on the lab's R15 project.
+      Collaborators on an R15 project led by Dr. Li Jin (Department of Kinesiology, SJSU) that pairs wearable
+      smart-insole sensing with laboratory movement and muscle measurements and interpretable machine learning to
+      detect digital mobility signatures of chronic low back pain.
     members:
-      - name: Collaborator name
-        institution: Institution
+      - name: Li Jin
+        role: Principal Investigator
+        program: Associate Professor
+        institution: Department of Kinesiology, San José State University
+      - name: Weizhi Lin
         role: Co-Investigator
-        placeholder: true
-      - name: Collaborator name
-        institution: Institution
+        program: Assistant Professor
+        institution: Department of Industrial and Systems Engineering, San José State University
+      - name: Yue Luo
         role: Co-Investigator
-        placeholder: true
-      - name: Collaborator name
-        institution: Institution
-        role: Consultant
-        placeholder: true
+        program: Assistant Professor
+        institution: Department of Industrial and Systems Engineering, San José State University
+      - name: Kuo-Ken Huang
+        role: Co-Investigator
+        program: Lecturer
+        institution: Department of Electrical Engineering, San José State University
 
   - id: international
     title: International collaborators
     intro: >-
-      Colleagues abroad with whom we collaborate on research.
+      Colleagues in China with whom we collaborate on biomechanics, neuromuscular control, and physical activity
+      and health.
     members:
-      - name: Collaborator name
-        institution: Institution, Country
+      - name: Yuliang Sun
+        role: Professor
+        institution: School of Physical Education, Shaanxi Normal University, Xi'an
+        photo: /assets/img/collaborators/yuliang-sun.jpg
+        url: https://faculty.snnu.edu.cn/sunyuliang1/en/index.htm
+      - name: Wenfei Zhu
+        role: Professor
+        institution: School of Physical Education, Shaanxi Normal University, Xi'an
+        url: https://faculty.snnu.edu.cn/zhuwenfei/zh_CN/index.htm
+      - name: Lei Jiang
         role: Collaborating investigator
-        placeholder: true
-      - name: Collaborator name
-        institution: Institution, Country
+        institution: Anhui Medical University, Hefei
+      - name: Jialan Si
         role: Collaborating investigator
-        placeholder: true
+        institution: Hefei University, Hefei

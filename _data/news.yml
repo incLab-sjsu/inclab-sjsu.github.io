@@ -2,11 +2,12 @@
 # Fields: date (written exactly as YYYY-MM-DD; other formats may show the wrong day),
 #         text (keep it in double quotes), url (optional).
 - date: 2026-02-12
-  text: "SPARK, the Simons Foundation autism research initiative, publishes a lay summary of Dr. Qu's study on balance and movement in middle-aged and older autistic adults."
+  text: "SPARK, the Simons Foundation research initiative, publishes a lay summary of Dr. Qu's postdoctoral study on balance and movement in middle-aged and older neurodivergent adults (autism)."
   url: https://sparkforautism.org/discover_article/rm-balance-movement/
-- date: 2025-12-12
-  text: "New paper in Autism Research, co-authored by Dr. Qu, on visually guided precision grip control in middle-aged and older autistic adults (Dr. Qu and Danielle Christensen contributed equally)."
-  url: https://doi.org/10.1002/aur.70154
-- date: 2025-03-18
-  text: "Paper in Autism Research shows that atypical postural control variability and coordination persist into middle and older adulthood in autism."
-  url: https://doi.org/10.1002/aur.70024
+# Two further items are available if you want them:
+# - date: 2025-12-12
+#   text: "New paper in Autism Research, co-authored by Dr. Qu, on visually guided precision grip control in middle-aged and older autistic adults (Dr. Qu and Danielle Christensen contributed equally)."
+#   url: https://doi.org/10.1002/aur.70154
+# - date: 2025-03-18
+#   text: "Paper in Autism Research shows that atypical postural control variability and coordination persist into middle and older adulthood in autism."
+#   url: https://doi.org/10.1002/aur.70024
