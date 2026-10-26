@@ -5,7 +5,7 @@ lede: Peer-reviewed articles from the lab and from Dr. Qu's prior training. For 
 permalink: /publications/
 ---
 <section class="section">
-  <div class="container prose-wide">
+  <div class="container"><div class="prose-wide">
     <p class="pub-scholar"><a class="btn btn--ghost" href="{{ site.contact.scholar_url }}">View all on Google Scholar</a></p>
     {%- assign pubs = site.data.publications | sort: "year" | reverse %}
     {%- assign years = pubs | map: "year" | uniq %}
@@ -35,5 +35,5 @@ permalink: /publications/
       {%- endfor %}
     </ol>
     {%- endif %}
-  </div>
+  </div></div>
 </section>
