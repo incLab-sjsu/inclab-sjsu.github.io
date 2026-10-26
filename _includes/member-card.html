@@ -13,8 +13,8 @@
   <div class="member-card__body">
     <h3 class="member-card__name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
     {%- if p.role %}<p class="member-card__role">{{ p.role }}</p>{% endif %}
-    {%- if p.institution %}<p class="member-card__meta">{{ p.institution }}</p>{% endif %}
     {%- if p.program %}<p class="member-card__meta">{{ p.program }}</p>{% endif %}
+    {%- if p.institution %}<p class="member-card__meta">{{ p.institution }}</p>{% endif %}
     {%- if p.years %}<p class="member-card__meta">{{ p.years }}</p>{% endif %}
     {%- if p.now %}<p class="member-card__meta">Now: {{ p.now }}</p>{% endif %}
     {%- if p.bio %}<p class="member-card__bio">{{ p.bio }}</p>{% endif %}
