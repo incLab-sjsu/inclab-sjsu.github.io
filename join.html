@@ -8,7 +8,7 @@ permalink: /join/
   <div class="container join-grid">
     <div class="prose">
       <h2 id="graduate">Graduate students</h2>
-      <p>Dr. Qu advises students in the <a href="https://www.sjsu.edu/kinesiology/Programs/ms-in-kinesiology/">MS in Kinesiology</a>
+      <p>Dr. Qu advises students in the <a href="https://www.sjsu.edu/kinesiology/Programs/ms-in-kinesiology/movementscience/index.php">MS in Kinesiology, Movement Science</a>
         program at San José State University. Students in the lab learn to design human-participant studies, collect
         and analyze movement and physiological data, and communicate findings at conferences and in journals.
         Backgrounds in kinesiology, biomechanics, neuroscience, psychology, engineering, or data science are all
@@ -18,13 +18,13 @@ permalink: /join/
 
       <h2 id="undergraduate">Undergraduate research assistants</h2>
       <p>SJSU undergraduates can gain hands-on research experience in the lab, from assisting with data collection
-        to learning movement analysis. Students typically commit to several hours per week for at least one semester.
-        Email Dr. Qu with your year, major, availability, and why you are interested.</p>
+        to learning movement analysis. Time commitments are agreed on individually. Email Dr. Qu with your year,
+        major, availability, and why you are interested.</p>
 
       <h2 id="participate">Take part in a study</h2>
-      <p>Our studies depend on volunteers from the community, including older adults and autistic adults. Participation
-        usually involves a visit to our lab on the SJSU campus for assessments of balance, walking, and related
-        measures. If you would like to hear about current and upcoming studies, please get in touch.</p>
+      <p>Our studies depend on volunteers from the community, including older adults and autistic adults. What
+        participation involves depends on the study, and every study is approved by the SJSU Institutional Review
+        Board before it recruits. If you would like to hear about current and upcoming studies, please get in touch.</p>
 
       <h2 id="collaborate">Collaborate</h2>
       <p>We welcome conversations with researchers and clinicians interested in neuromotor control, aging, and
@@ -41,6 +41,9 @@ permalink: /join/
         {{ site.contact.address_line2 }}
       </address>
       <p><a class="btn btn--primary" href="mailto:{{ site.contact.email }}">Email {{ site.contact.email }}</a></p>
+      {%- if site.contact.phone %}
+      <p>Phone: {{ site.contact.phone }}</p>
+      {%- endif %}
       <p><a href="{{ site.contact.maps_url }}">Find Spartan Complex on the map</a></p>
     </aside>
   </div>

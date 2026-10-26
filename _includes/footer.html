@@ -12,6 +12,9 @@
       <address>
         {{ site.contact.pi_name }}<br>
         <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a><br>
+        {%- if site.contact.phone %}
+        {{ site.contact.phone }}<br>
+        {%- endif %}
         {{ site.contact.office }}<br>
         {{ site.contact.address_line1 }}<br>
         {{ site.contact.address_line2 }}
@@ -29,6 +32,7 @@
     </div>
   </div>
   <div class="container site-footer__meta">
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}, {{ site.contact.institution }}.</p>
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}, {{ site.contact.institution }}.
+      This site is built to meet WCAG 2.1 AA. If something is hard to use, email <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
   </div>
 </footer>

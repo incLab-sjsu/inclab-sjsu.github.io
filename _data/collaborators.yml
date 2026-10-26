@@ -8,7 +8,7 @@ groups:
   - id: r15
     title: R15 project team
     intro: >-
-      Collaborators on the lab's NIH-funded R15 project.
+      Collaborators on the lab's R15 project.
     members:
       - name: Collaborator name
         institution: Institution

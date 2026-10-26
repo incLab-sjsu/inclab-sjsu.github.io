@@ -82,7 +82,11 @@ index.html, research.html, people.html, collaborators.html, publications.html, j
 
 ## Brand
 
-Colours follow SJSU brand: SJSU Blue `#0055A2`, SJSU Gold `#E5A823`. The light page base is
+Colours follow the SJSU brand palette: SJSU Blue `#0055A2`, SJSU Gold `#E5A823`, with SJSU's web grays
+for neutrals. The typeface is Nunito Sans, which SJSU's web standards name for website headers; the
+university's proprietary SJSU Spartan typeface is licensed for official sjsu.edu publications only and
+is not embedded here. The university name is always written "San José State University" with the accent,
+and "SJSU" only on second reference, following the SJSU editorial style guide. The light page base is
 `#EEF2F7`; the "night sky" bands use `#061532` to `#0B2A52`. The colour logo is used on light
 surfaces, the white logo on dark surfaces, and gold is reserved for accents and buttons because
 gold text on a light background does not meet contrast requirements.
