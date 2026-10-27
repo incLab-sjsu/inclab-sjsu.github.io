@@ -15,13 +15,13 @@ timezone: America/Los_Angeles
 logo: /assets/img/favicon/icon-512.png
 
 # DEPLOYMENT ADDRESS ---------------------------------------------------------
-# Project site under a personal account:  https://quhang1992.github.io/incl-lab/
-#   url: "https://quhang1992.github.io"   baseurl: "/incl-lab"
-# Organization root site:                 https://incl-sjsu.github.io/
-#   url: "https://incl-sjsu.github.io"    baseurl: ""
-# Custom domain (after adding a CNAME file): url: "https://incl.example.org"  baseurl: ""
-url: "https://quhang1992.github.io"
-baseurl: "/incl-lab"
+# Organization root site (current):        https://inclab-sjsu.github.io/
+#   url: "https://inclab-sjsu.github.io"   baseurl: ""
+# Project site under an account:           https://<account>.github.io/<repository>/
+#   url: "https://<account>.github.io"     baseurl: "/<repository>"
+# Custom domain (after adding a CNAME file): url: "https://your-domain"  baseurl: ""
+url: "https://inclab-sjsu.github.io"
+baseurl: ""
 
 author:
   name: Hang Qu

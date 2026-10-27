@@ -52,14 +52,14 @@ Write `year` as a plain number without quotes; a quoted year stops the site from
 1. Push this repository to GitHub.
 2. In the repository: **Settings → Pages → Build and deployment → Source: Deploy from a branch**,
    branch `main`, folder `/ (root)`. Save.
-3. The site appears at `https://<account>.github.io/<repository>/` within a couple of minutes.
+3. The site appears at `https://inclab-sjsu.github.io/` within a couple of minutes.
 
 The address must match `url` and `baseurl` in `_config.yml`:
 
 | Where the site lives | `url` | `baseurl` |
 |---|---|---|
-| `https://quhang1992.github.io/incl-lab/` (repository `incl-lab` under a personal account) | `https://quhang1992.github.io` | `/incl-lab` |
-| `https://incl-sjsu.github.io/` (organization `incl-sjsu`, repository `incl-sjsu.github.io`) | `https://incl-sjsu.github.io` | `""` |
+| `https://<account>.github.io/<repository>/` (a project site under a personal account) | `https://<account>.github.io` | `/<repository>` |
+| `https://inclab-sjsu.github.io/` (organization `incLab-sjsu`, repository `inclab-sjsu.github.io`, the current setup) | `https://inclab-sjsu.github.io` | `""` |
 | A custom domain | `https://your-domain` | `""` plus a `CNAME` file |
 
 ## Local preview (optional)
@@ -69,7 +69,7 @@ Requires Ruby. The `github-pages` gem pins the exact versions GitHub uses (Jekyl
 ```bash
 bundle install
 bundle exec jekyll serve
-# open http://127.0.0.1:4000/incl-lab/  (or http://127.0.0.1:4000/ when baseurl is "")
+# open http://127.0.0.1:4000/
 ```
 
 ## Structure
