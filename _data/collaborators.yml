@@ -18,21 +18,21 @@ members:
   - name: Yuliang Sun, PhD
     surname: Sun
     role: Professor
-    institution: Shaanxi Normal University, Xi'an, China
+    institution: Shaanxi Normal University
     photo: /assets/img/collaborators/yuliang-sun.jpg
   - name: Wenfei Zhu, PhD
     surname: Zhu
     role: Professor
-    institution: Shaanxi Normal University, Xi'an, China
+    institution: Shaanxi Normal University
   - name: Lei Jiang
     surname: Jiang
     role: Associate Professor
-    institution: Anhui Medical University, Hefei, China
+    institution: Anhui Medical University
     photo: /assets/img/collaborators/lei-jiang.jpg
   - name: Jialan Si
     surname: Si
     role: Lecturer
-    institution: Hefei University, Hefei, China
+    institution: Hefei University
     photo: /assets/img/collaborators/jialan-si.jpg
 
 # Map pins shown above the list: one pin per city (not per person), approximate coordinates in decimal degrees.
