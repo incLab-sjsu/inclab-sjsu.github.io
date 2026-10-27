@@ -1,0 +1,40 @@
+{%- comment -%}
+Renders one column of the Publications page.
+include.items: list of entries with a `year`; include.type: "pub" or "talk"; include.heading: column title.
+Years >= site.publications_recent_since are shown open; earlier years sit inside a <details> toggle.
+{%- endcomment -%}
+{%- assign since = site.publications_recent_since | default: 2025 -%}
+{%- assign groups = include.items | group_by: "year" | sort: "name" | reverse -%}
+<section class="pub-col">
+  <h2>{{ include.heading }}</h2>
+  {%- assign older = 0 -%}
+  {%- for g in groups -%}
+    {%- assign y = g.name | plus: 0 -%}
+    {%- if y >= since %}
+  <h3 class="pub-year" id="{{ include.type }}-{{ g.name }}">{{ g.name }}</h3>
+  <ol class="pub-list">
+    {%- for item in g.items %}
+    {%- if include.type == "talk" %}{% include talk-item.html talk=item %}{% else %}{% include pub-item.html pub=item %}{% endif %}
+    {%- endfor %}
+  </ol>
+    {%- else -%}
+      {%- assign older = older | plus: g.items.size -%}
+    {%- endif -%}
+  {%- endfor %}
+  {%- if older > 0 %}
+  <details class="pub-more">
+    <summary>Show earlier work ({{ older }} more, {{ since | minus: 1 }} and before)</summary>
+    {%- for g in groups -%}
+      {%- assign y = g.name | plus: 0 -%}
+      {%- if y < since %}
+    <h3 class="pub-year" id="{{ include.type }}-{{ g.name }}">{{ g.name }}</h3>
+    <ol class="pub-list">
+      {%- for item in g.items %}
+      {%- if include.type == "talk" %}{% include talk-item.html talk=item %}{% else %}{% include pub-item.html pub=item %}{% endif %}
+      {%- endfor %}
+    </ol>
+      {%- endif -%}
+    {%- endfor %}
+  </details>
+  {%- endif %}
+</section>

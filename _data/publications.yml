@@ -1,21 +1,20 @@
 # Publications shown on /publications/, grouped by year automatically (newest first).
 # Fields: authors (write the PI as "Qu H" so it is bolded), year (a plain number, no quotes), title, journal, volume, pages,
-#         doi (preferred) or url, note (optional, shown after the citation),
+#         doi (preferred) or url, note (optional, e.g. "Preprint"),
 #         links (optional list of {label, url}, e.g. open-access copy, lay summary, data).
-# Years follow the version of record; "note" records online-first dates.
+# Years follow the version of record.
 - authors: "Li J, Qu H, Chou L-S"
   year: 2026
   title: "Impact of physical fatigue on lower-limb inter-joint coordination during overground and treadmill walking"
   journal: World Scientific Annual Review of Biomechanics
   doi: 10.1142/S2810958926500019
-  note: "In press."
 
 - authors: "Shafer RL, Wang J, Qu H, Simpson JP, Terza M, Shirley DJ, McKinney WS, Pulver S, Orlando A-M, Romero RA, Karmakar B, Mosconi MW, Wang Z"
   year: 2026
   title: "Gait variability development in autistic individuals across childhood and adulthood"
   journal: Research Square
   doi: 10.21203/rs.3.rs-9622252/v1
-  note: "Preprint, not yet peer reviewed."
+  note: Preprint
 
 - authors: "Wang Z, Qu H, Christensen D, Gemmell HM, Parks E, Wetherington KE, Orlando A-M, Romero RA, Karmakar B, Vaillancourt DE"
   year: 2026
@@ -24,7 +23,6 @@
   volume: "19(2)"
   pages: "e70154"
   doi: 10.1002/aur.70154
-  note: "Hang Qu and Danielle Christensen contributed equally. Online ahead of print, December 2025."
   links:
     - label: Open access (PMC)
       url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12931594/
@@ -36,7 +34,6 @@
   volume: "107(7)"
   pages: "1526-1534"
   doi: 10.1016/j.apmr.2025.10.020
-  note: "Online ahead of print, November 2025."
 
 - authors: "Qu H, Wang J, Shirley DJ, Gemmell HM, Christensen D, Orlando A-M, Romero RA, Zielinski BA, Wang Z"
   year: 2025

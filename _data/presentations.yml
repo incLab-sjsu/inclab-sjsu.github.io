@@ -1,20 +1,32 @@
-# Conference presentations shown below the publication list.
-# Fields: authors, year (a plain number, no quotes), title, venue (meeting name and place),
-#         kind (Podium or Poster), and optionally doi or url to link the title.
+# Conference presentations and posters shown on /publications/ (right column), newest first.
+# Fields: authors, year (a plain number, no quotes), title, venue (meeting, city, month), kind (Podium or Poster),
+#         and optionally doi or url to link the title.
 - authors: "Qu H, Li J, Chou L-S"
   year: 2025
-  title: "Age-related differences in mental and physical fatigue effects on working memory and gait balance"
-  venue: "XXX Congress of the International Society of Biomechanics, Stockholm, Sweden"
+  title: "Age-specific adaptations to mental fatigue in dual-task walking of varying complexity"
+  venue: "49th Annual Meeting of the American Society of Biomechanics, Pittsburgh, PA, August 2025"
   kind: Podium
 
 - authors: "Qu H, Li J, Chou L-S"
   year: 2025
-  title: "Age-specific adaptations to mental fatigue in dual-task walking of varying complexity"
-  venue: "49th Annual Meeting of the American Society of Biomechanics, Pittsburgh, PA"
+  title: "Age-related differences in mental and physical fatigue effects on working memory and gait balance"
+  venue: "XXX Congress of the International Society of Biomechanics, Stockholm, Sweden, July 2025"
   kind: Podium
 
 - authors: "Li J, Qu H, Chou L-S"
   year: 2024
   title: "Effects of physical fatigue on lower limb inter-joint coordination under different walking conditions"
-  venue: "Annual Meeting of the American Society of Biomechanics"
+  venue: "48th Annual Meeting of the American Society of Biomechanics, Madison, WI, August 2024"
+  kind: Poster
+
+- authors: "Qu H, Liang Y-P, Chou L-S"
+  year: 2024
+  title: "Evaluation of laboratory-driven mental fatiguing protocol using EEG and self-reported fatigue scale"
+  venue: "American College of Sports Medicine Annual Meeting, Boston, MA, May 2024"
+  kind: Poster
+
+- authors: "Kim HK, Qu H, Chou L-S"
+  year: 2023
+  title: "Plantar pressure distribution response to various gait speeds and its relationship with gait balance in overweight adults"
+  venue: "XXIX Congress of the International Society of Biomechanics, Fukuoka, Japan, July 2023"
   kind: Poster

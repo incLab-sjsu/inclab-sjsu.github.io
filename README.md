@@ -46,6 +46,9 @@ Each data file starts with a comment showing the fields and an example entry.
 
 Write the PI's name as `Qu H` so it is bolded automatically. `doi` is preferred; `url` works too.
 Write `year` as a plain number without quotes; a quoted year stops the site from building.
+Years from `publications_recent_since` in `_config.yml` (currently 2025) are shown open; earlier years are
+collapsed behind a "Show earlier work" toggle. Conference presentations use the same shape in
+`_data/presentations.yml`, with `venue` (meeting, city, month) and `kind` (Podium or Poster).
 
 ## Deploying on GitHub Pages
 

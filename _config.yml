@@ -41,16 +41,19 @@ contact:
   faculty_url: https://www.sjsu.edu/people/hang.qu/
   department_url: https://www.sjsu.edu/kinesiology/
 
+# Publications page: years from this one onward are shown open; earlier years are collapsed behind a "Show earlier" toggle.
+publications_recent_since: 2025
+
 # Primary navigation (order matters)
 nav:
   - title: Research
     url: /research/
   - title: People
     url: /people/
-  - title: Collaborators
-    url: /collaborators/
   - title: Publications
     url: /publications/
+  - title: Collaborators
+    url: /collaborators/
   - title: Join Us
     url: /join/
 

@@ -1,42 +1,18 @@
 ---
 title: Publications
 eyebrow: Selected work
-lede: Articles and preprints from the lab and from Dr. Qu's prior training. For the complete and most current list, see Google Scholar.
+lede: Articles, preprints, and conference presentations from the lab and from Dr. Qu's prior training. For the complete and most current list, see Google Scholar.
 permalink: /publications/
 ---
 <section class="section">
-  <div class="container"><div class="prose-wide">
+  <div class="container">
     <p class="pub-scholar"><a class="btn btn--ghost" href="{{ site.contact.scholar_url }}">View all on Google Scholar</a></p>
-    {%- assign groups = site.data.publications | group_by: "year" | sort: "name" | reverse %}
-    {%- for g in groups %}
-    <h2 class="pub-year" id="y{{ g.name }}">{{ g.name }}</h2>
-    <ol class="pub-list">
-      {%- for pub in g.items %}
-      {%- include pub-item.html pub=pub %}
-      {%- endfor %}
-    </ol>
-    {%- endfor %}
-
-    {%- assign talks = site.data.presentations %}
-    {%- if talks and talks.size > 0 %}
-    <h2 class="pub-section-title">Conference presentations</h2>
-    <ol class="pub-list">
-      {%- assign tgroups = talks | group_by: "year" | sort: "name" | reverse %}
-      {%- for g in tgroups %}
-      {%- for t in g.items %}
-      <li class="pub">
-        <span class="pub__authors">{{ t.authors | replace: "Qu H", "<strong>Qu H</strong>" }}</span>
-        ({{ t.year }}).
-        <span class="pub__title">
-          {%- if t.doi %}<a href="https://doi.org/{{ t.doi }}">{{ t.title }}</a>
-          {%- elsif t.url %}<a href="{{ t.url }}">{{ t.title }}</a>
-          {%- else %}{{ t.title }}{% endif -%}
-        </span>
-        {% if t.kind %}{{ t.kind }}, {% endif %}<em class="pub__venue">{{ t.venue }}</em>.
-      </li>
-      {%- endfor %}
-      {%- endfor %}
-    </ol>
-    {%- endif %}
-  </div></div>
+    <div class="pub-columns">
+      {%- include pub-column.html items=site.data.publications type="pub" heading="Journal articles and preprints" %}
+      {%- assign talks = site.data.presentations %}
+      {%- if talks and talks.size > 0 %}
+      {%- include pub-column.html items=talks type="talk" heading="Conference presentations and posters" %}
+      {%- endif %}
+    </div>
+  </div>
 </section>

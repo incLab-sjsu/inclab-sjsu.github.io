@@ -184,18 +184,17 @@ strong { font-weight: 700; }
 .section__head p { color: var(--ink-2); margin: 0; }
 
 /* Hero (home) ------------------------------------------------------------ */
-.hero { padding: clamp(2.5rem, 7vw, 5.5rem) 0; }
-.hero__grid { display: grid; gap: 2.25rem; align-items: center; }
-.hero__logo { order: -1; }
-.hero__logo img { width: min(100%, 520px); margin-inline: auto; filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.35)); }
-.hero__text { max-width: 62ch; }
+.hero { padding: clamp(3rem, 8vw, 6.5rem) 0; }
+.hero__mark {
+  display: block; margin: 0; position: absolute; z-index: 0; pointer-events: none;
+  right: 4%; top: 50%; transform: translateY(-50%); width: clamp(360px, 46vw, 720px); opacity: 0.3;
+}
+.hero__text { position: relative; z-index: 1; max-width: 62ch; }
 .hero__text h1 { max-width: 18ch; }
 .hero__text .lede { color: var(--night-ink-2); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
-@media (min-width: 900px) {
-  .hero__grid { grid-template-columns: 1.1fr 1fr; gap: 3.5rem; }
-  .hero__logo { order: 0; }
-  .hero__logo img { width: 100%; }
+@media (max-width: 760px) {
+  .hero__mark { right: auto; left: 50%; transform: translate(-50%, -50%); width: 92%; opacity: 0.14; }
 }
 
 /* Cards / grids ---------------------------------------------------------- */
@@ -272,12 +271,14 @@ strong { font-weight: 700; }
 
 /* Publications ----------------------------------------------------------- */
 .pub-scholar { margin-bottom: 2rem; }
-.pub-section-title { font-size: var(--step-2); margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
-.pub-year { font-size: var(--step-2); border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 0.15em; margin-top: 1.5rem; }
-.pub-list { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 1rem; }
-.pub { padding-left: 1rem; border-left: 3px solid var(--blue-tint); }
+.pub-columns { display: grid; gap: 3rem; align-items: start; }
+@media (min-width: 960px) { .pub-columns { grid-template-columns: 1fr 1fr; gap: 3.5rem; } }
+.pub-col h2 { font-size: var(--step-2); padding-bottom: 0.4rem; border-bottom: 2px solid var(--gold); margin-bottom: 1.25rem; }
+.pub-year { font-size: var(--step-1); color: var(--blue); margin: 1.5rem 0 0.75rem; }
+.pub-list { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 1rem; }
+.pub { padding-left: 1rem; border-left: 3px solid var(--blue-tint); font-size: var(--step--1); line-height: 1.5; }
 .pub__authors { color: var(--ink-2); }
-.pub__title { display: block; font-weight: 600; margin: 0.1rem 0; }
+.pub__title { display: block; font-weight: 600; font-size: var(--step-0); margin: 0.1rem 0; }
 .pub__title a { text-decoration: none; }
 .pub__title a:hover { text-decoration: underline; }
 .pub__venue { color: var(--ink-2); }
@@ -285,6 +286,12 @@ strong { font-weight: 700; }
 .pub__links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; font-size: var(--step--1); }
 .pub__links a { border: 1px solid var(--rule); background: var(--bg-elev); border-radius: 999px; padding: 0.15em 0.7em; text-decoration: none; }
 .pub__links a:hover { border-color: var(--blue); }
+.pub-more { margin-top: 1.5rem; border-top: 1px solid var(--rule); padding-top: 0.5rem; }
+.pub-more > summary { cursor: pointer; font-weight: 700; color: var(--blue); padding: 0.6rem 0; list-style: none; display: flex; align-items: center; gap: 0.6rem; }
+.pub-more > summary::-webkit-details-marker { display: none; }
+.pub-more > summary::before { content: ""; width: 0.55em; height: 0.55em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform 0.15s ease; flex-shrink: 0; }
+.pub-more[open] > summary::before { transform: rotate(45deg); }
+.pub-more > summary:hover { color: var(--blue-deep); }
 
 /* Join page -------------------------------------------------------------- */
 .join-grid { display: grid; gap: 2.5rem; align-items: start; }
@@ -317,7 +324,7 @@ strong { font-weight: 700; }
 
 /* Print ------------------------------------------------------------------ */
 @media print {
-  .site-header, .site-footer, .nav-toggle, .section--cta, .hero__logo, .skip-link { display: none !important; }
+  .site-header, .site-footer, .nav-toggle, .section--cta, .hero__mark, .skip-link { display: none !important; }
   body { font-size: 11pt; color: #000; background: #fff; }
   .night, .night * { color: #000 !important; }
   .night { background: #fff !important; }
