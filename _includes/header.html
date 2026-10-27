@@ -1,6 +1,7 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand__art gild-sheen" style="--mask-url: url('{{ '/assets/img/logo/incl-horizontal-color-640.png' | relative_url }}')">
       <picture>
         <source type="image/webp"
                 srcset="{{ '/assets/img/logo/incl-horizontal-color-640.webp' | relative_url }} 640w, {{ '/assets/img/logo/incl-horizontal-color-1280.webp' | relative_url }} 1280w"
@@ -10,6 +11,7 @@
              sizes="(max-width: 640px) 210px, 280px"
              width="640" height="224" alt="{{ site.title }}, home">
       </picture>
+      </span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bars" aria-hidden="true"></span>

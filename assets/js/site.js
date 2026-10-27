@@ -21,7 +21,7 @@
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) { return; }
-  var gilds = document.querySelectorAll('.gild');
+  var gilds = document.querySelectorAll('.gild, .gild-sheen');
   if (!gilds.length) { return; }
   var timer = null;
   function shimmer() {
@@ -29,7 +29,7 @@
       el.classList.remove('is-shimmer');
       void el.offsetWidth; /* restart the animation */
       el.classList.add('is-shimmer');
-      setTimeout(function () { el.classList.remove('is-shimmer'); }, 1600);
+      setTimeout(function () { el.classList.remove('is-shimmer'); }, 3700);
     });
   }
   window.addEventListener('resize', function () {

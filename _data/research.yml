@@ -1,39 +1,34 @@
 # Research themes. Shown as cards on the home page and as sections on /research/, in this order.
-# Each theme: id (URL anchor), title, summary (one sentence), details (one or two short paragraphs).
-# Keep the text broad: it describes directions, not specific studies.
+# Each theme: id (URL anchor), title, summary (one sentence), details (one short, general paragraph).
+# Keep the text broad: directions only, no specific methods or study questions.
 - id: aging-fatigue
   title: Aging, fatigue, and fall risk
   summary: How aging and fatigue change the way people stand and walk, and what that means for staying safe and mobile.
   details:
     - >-
-      Falls are a leading cause of injury in older adults. We study how aging and fatigue, both mental and
-      physical, change gait and balance, with the long-term aim of assessments that reflect the conditions of
-      everyday life and identify risk earlier.
+      We are interested in why some people stay steady as they age or tire while others do not, and in better
+      ways to recognize risk early.
 
 - id: brain-movement
   title: Brain and behavior in movement control
-  summary: How the nervous system organizes posture and gait, and what movement patterns reveal about that control.
+  summary: How the nervous system organizes posture and gait, and what movement reveals about that control.
   details:
     - >-
-      Standing and walking depend on continuous work by the nervous system, especially when balance is
-      challenged, attention is divided, or the body is tired. We study the links between brain, behavior, and
-      movement to understand how neuromotor control adapts, and when it begins to fail.
+      We study the links between the nervous system and everyday movement to understand how control adapts,
+      and when it begins to fail.
 
 - id: intelligent-assessment
   title: Intelligent movement assessment
-  summary: AI-integrated and wearable technologies that bring precise neuromotor assessment beyond the laboratory.
+  summary: AI-integrated and wearable technologies that bring neuromotor assessment beyond the laboratory.
   details:
     - >-
-      Laboratory assessments are precise but reach few people. With collaborators in engineering and clinical
-      science, we are developing data-driven, wearable approaches to movement-based detection and risk
-      prediction, so that neuromotor function can be tracked over time in the settings where people live and move.
+      With collaborators in engineering and clinical science, we are exploring data-driven approaches that could
+      bring neuromotor assessment into everyday settings.
 
 - id: neurodiversity-neurodegeneration
   title: Neurodiversity and neurodegeneration across the lifespan
   summary: Motor function in neurodivergent populations (such as autism and Down syndrome) and in conditions that change the nervous system over time.
   details:
     - >-
-      Motor differences accompany many neurodevelopmental and neurodegenerative conditions, yet their course
-      across the lifespan is poorly understood. This is a growing direction for the lab, building on Dr. Qu's
-      postdoctoral work, to characterize neuromotor control in these populations and to support health
-      monitoring and intervention.
+      A growing direction for the lab, building on Dr. Qu's postdoctoral work, toward understanding neuromotor
+      control in these populations across the lifespan.

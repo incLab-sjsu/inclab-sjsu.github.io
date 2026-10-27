@@ -276,7 +276,7 @@ strong { font-weight: 700; }
 .pub-year { font-size: var(--step-1); color: var(--blue); margin: 1.5rem 0 0.75rem; }
 .pub-list { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 1rem; }
 .pub { padding-left: 1rem; border-left: 3px solid var(--blue-tint); font-size: var(--step--1); line-height: 1.5; }
-.pub__authors { display: block; color: var(--ink-2); margin: 0.15rem 0; }
+.pub__authors { display: block; color: var(--ink-2); margin: 0.15rem 0; font-size: 0.88em; }
 .pub__where { display: block; }
 .pub__title { display: block; font-weight: 600; font-size: var(--step-0); margin: 0; }
 .pub__title a { text-decoration: none; }
@@ -322,16 +322,17 @@ strong { font-weight: 700; }
   .contact-card { top: 8rem; }
 }
 
-/* Gilded logos: the PNG's alpha masks a metallic gradient with a slow-moving sheen ----------- */
+/* Gilded logos: the PNG's alpha masks a metallic gradient; a soft band of light drifts across slowly ---- */
 .gild { position: relative; display: block; }
 .gild__fallback { display: block; width: 100%; height: auto; }
+.brand__art { display: block; position: relative; line-height: 0; }
 @supports ((-webkit-mask-image: url("")) or (mask-image: url(""))) {
   .gild {
     -webkit-mask-image: var(--mask-url); mask-image: var(--mask-url);
     -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
     background-size: 300% 300%; background-position: 0% 50%;
-    animation: gild-flow 14s ease-in-out infinite alternate;
+    animation: gild-flow 18s ease-in-out infinite alternate;
   }
   .gild__fallback { visibility: hidden; }
   .gild--gold {
@@ -344,19 +345,25 @@ strong { font-weight: 700; }
       #7c8696 0%, #b9c2cf 16%, #f5f7fa 32%, #c6ced9 46%, #ffffff 58%,
       #9aa5b5 72%, #e6eaf0 86%, #7c8696 100%);
   }
-  .gild::after {
+  .gild::after, .gild-sheen::after {
     content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(110deg, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 62%);
-    background-size: 250% 100%; background-position: 220% 0; background-repeat: no-repeat;
+    background: linear-gradient(110deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0) 70%);
+    background-size: 300% 100%; background-position: 250% 0; background-repeat: no-repeat;
+    animation: gild-drift 16s ease-in-out 3s infinite;
   }
-  .gild::after { animation: gild-sweep-loop 9s ease-in-out 2s infinite; }
-  .gild.is-shimmer::after { animation: gild-sweep 1.4s ease-out 1; }
+  .gild-sheen::after {
+    -webkit-mask-image: var(--mask-url); mask-image: var(--mask-url);
+    -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    opacity: 0.55; mix-blend-mode: soft-light; animation-duration: 20s; animation-delay: 6s;
+  }
+  .gild.is-shimmer::after, .gild-sheen.is-shimmer::after { animation: gild-sweep 3.5s ease-in-out 1; }
   @keyframes gild-flow { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
-  @keyframes gild-sweep { from { background-position: 220% 0; } to { background-position: -120% 0; } }
-  @keyframes gild-sweep-loop { 0% { background-position: 220% 0; } 18% { background-position: -120% 0; } 100% { background-position: -120% 0; } }
+  @keyframes gild-sweep { from { background-position: 250% 0; } to { background-position: -150% 0; } }
+  @keyframes gild-drift { 0% { background-position: 250% 0; } 40% { background-position: -150% 0; } 100% { background-position: -150% 0; } }
   @media (prefers-reduced-motion: reduce) {
     .gild { animation: none; background-position: 50% 50%; }
-    .gild::after, .gild.is-shimmer::after { animation: none; }
+    .gild::after, .gild-sheen::after, .gild.is-shimmer::after, .gild-sheen.is-shimmer::after { animation: none; }
   }
 }
 
