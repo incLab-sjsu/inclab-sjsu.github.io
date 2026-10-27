@@ -11,11 +11,11 @@
 
 - id: brain-movement
   title: Brain and behavior in movement control
-  summary: How the nervous system organizes posture and gait, and what movement reveals about that control.
+  summary: How the nervous system and muscles organize posture and gait, and what movement reveals about that control.
   details:
     - >-
-      We study the links between the nervous system and everyday movement to understand how control adapts,
-      and when it begins to fail.
+      We study the links between the nervous system, muscle function, and everyday movement to understand how
+      control adapts, and when it begins to fail.
 
 - id: intelligent-assessment
   title: Intelligent movement assessment
