@@ -24,6 +24,10 @@
   --night-ink: #EAF0F8;
   --night-ink-2: #C3D0E3;
   --header-bg: rgba(245, 247, 249, 0.92);
+  --heading: var(--blue-ink);
+  --title-link: var(--blue);
+  --title-link-hover: var(--blue-deep);
+  --night-heading: #FFFFFF;
   --on-primary: #FFFFFF;
   --on-gold: #0B2A52;
   --art-bg: #DCE6F3;
@@ -61,6 +65,10 @@
   --blue-tint: #1E3359;
   --gold-text: #F2C14E;
   --header-bg: rgba(15, 27, 51, 0.9);
+  --heading: #F2C14E;
+  --title-link: #F2C14E;
+  --title-link-hover: #FFE08A;
+  --night-heading: #F2C14E;
   --on-primary: #0B1630;
   --map-land: #243A60;
   --map-land-stroke: #2F4A75;
@@ -86,6 +94,10 @@
   --blue-tint: #1E3359;
   --gold-text: #F2C14E;
   --header-bg: rgba(15, 27, 51, 0.9);
+  --heading: #F2C14E;
+  --title-link: #F2C14E;
+  --title-link-hover: #FFE08A;
+  --night-heading: #F2C14E;
   --on-primary: #0B1630;
   --map-land: #243A60;
   --map-land-stroke: #2F4A75;
@@ -116,6 +128,7 @@ a:hover { color: var(--blue-deep); }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
 .night :focus-visible { outline-color: var(--gold); }
 h1, h2, h3, h4 { line-height: 1.15; color: var(--blue-ink); margin: 0 0 0.5em; font-weight: 800; letter-spacing: -0.015em; }
+h2, h3 { color: var(--heading); }
 h1 { font-size: var(--step-4); }
 h2 { font-size: var(--step-3); }
 h3 { font-size: var(--step-1); }
@@ -166,7 +179,8 @@ strong { font-weight: 700; }
   .night::after { animation: none; opacity: 0.4; }
   *, *::before, *::after { transition: none !important; }
 }
-.night h1, .night h2, .night h3 { color: #fff; }
+.night h1 { color: #fff; }
+.night h2, .night h3 { color: var(--night-heading); }
 .night p { color: var(--night-ink-2); }
 .night a { color: #fff; }
 .night a:hover { color: var(--gold-bright); }
@@ -210,7 +224,8 @@ strong { font-weight: 700; }
 }
 .site-header__controls { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
 /* Light/dark switch: an iOS-style sliding toggle. Checked (knob right) = dark. */
-.theme-switch { background: none; border: 0; padding: 4px; cursor: pointer; border-radius: 999px; display: inline-flex; }
+.theme-switch { -webkit-appearance: none; appearance: none; background: none; border: 0; padding: 4px; margin: 0; cursor: pointer; border-radius: 999px; display: inline-flex; line-height: 0; -webkit-tap-highlight-color: transparent; }
+.theme-switch__track { flex: none; }
 .theme-switch__track {
   position: relative; display: block; width: 54px; height: 30px; border-radius: 999px;
   background: #C9D3E0; transition: background-color 0.25s ease;
@@ -306,8 +321,8 @@ strong { font-weight: 700; }
 .theme-card__art img { height: 78px; width: auto; margin-inline: auto; }
 .theme-card__index { font-weight: 700; color: var(--gold-text); letter-spacing: 0.08em; font-size: var(--step--1); }
 .theme-card h3 { margin: 0.25rem 0 0.35rem; }
-.theme-card h3 a { text-decoration: none; color: var(--blue-ink); }
-.theme-card h3 a:hover { color: var(--blue); text-decoration: underline; }
+.theme-card h3 a { text-decoration: none; color: var(--heading); }
+.theme-card h3 a:hover { color: var(--title-link-hover); text-decoration: underline; }
 .theme-card p { margin: 0; color: var(--ink-2); }
 
 /* World map (collaborators) ---------------------------------------------- */
@@ -442,8 +457,9 @@ strong { font-weight: 700; }
 .pub { padding-left: 1rem; border-left: 3px solid var(--blue-tint); font-size: var(--step--1); line-height: 1.5; }
 .pub__authors { display: block; color: var(--ink-2); margin: 0.15rem 0; font-size: 0.88em; }
 .pub__where { display: block; }
-.pub__title { display: block; font-weight: 600; font-size: var(--step-0); margin: 0; }
-.pub__title a { text-decoration: none; }
+.pub__title { display: block; font-weight: 600; font-size: var(--step-0); margin: 0; color: var(--heading); }
+.pub__title a { text-decoration: none; color: var(--title-link); }
+.pub__title a:hover { color: var(--title-link-hover); }
 .pub__title a:hover { text-decoration: underline; }
 .pub__venue { color: var(--ink-2); }
 .pub__note { display: inline-block; font-size: var(--step--1); color: var(--ink-3); margin-left: 0.25rem; }
