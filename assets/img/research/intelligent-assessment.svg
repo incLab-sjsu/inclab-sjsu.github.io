@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M64 28c28-6 42 14 38 42-3 22-16 32-14 54 2 24 14 34 6 54-6 12-32 14-42 0-10-14-4-34-6-58-2-26-14-42-10-66 3-16 14-24 28-26z" fill="#DCE6F3" stroke="#0055A2" stroke-width="3"/>
+<circle cx="72" cy="56" r="9" fill="#E5A823" opacity=".9"/><circle cx="58" cy="84" r="6" fill="#E5A823" opacity=".7"/><circle cx="84" cy="80" r="5" fill="#E5A823" opacity=".7"/><circle cx="66" cy="164" r="10" fill="#E5A823" opacity=".95"/>
+<path d="M126 110h22l8-24 8 48 8-64 8 72 8-42 8 16 8-6h22" stroke="#0055A2" stroke-width="3"/>
+<rect x="248" y="84" width="52" height="52" rx="10" fill="#fff" stroke="#0055A2" stroke-width="3"/>
+<path d="M262 98h24l-12 24z" stroke="#E5A823" stroke-width="2"/>
+<circle cx="262" cy="98" r="4" fill="#E5A823"/><circle cx="286" cy="98" r="4" fill="#E5A823"/><circle cx="274" cy="122" r="4" fill="#E5A823"/>
+<path d="M260 84v-10M274 84v-10M288 84v-10M260 136v10M274 136v10M288 136v10M248 96h-10M248 110h-10M248 124h-10M300 96h10M300 110h10M300 124h10" stroke="#0055A2" stroke-width="2"/>
+</svg>

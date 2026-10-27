@@ -32,6 +32,7 @@ permalink: /
     <ul class="grid grid--4 cards">
       {%- for theme in site.data.research %}
       <li class="card theme-card">
+        {%- if theme.image %}<div class="theme-card__art"><img src="{{ theme.image | relative_url }}" alt="" width="320" height="200" loading="lazy"></div>{% endif %}
         <span class="theme-card__index" aria-hidden="true">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
         <h3><a href="{{ '/research/' | relative_url }}#{{ theme.id }}">{{ theme.title }}</a></h3>
         <p>{{ theme.summary }}</p>

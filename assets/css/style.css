@@ -203,6 +203,8 @@ strong { font-weight: 700; }
 .grid--4 { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 .card { background: var(--bg-elev); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); }
 .theme-card { position: relative; display: flex; flex-direction: column; gap: 0.25rem; border-top: 4px solid var(--gold); }
+.theme-card__art { margin: -0.25rem 0 0.75rem; background: var(--blue-tint); border-radius: 10px; padding: 0.6rem 0.9rem; }
+.theme-card__art img { height: 78px; width: auto; margin-inline: auto; }
 .theme-card__index { font-weight: 700; color: var(--gold-text); letter-spacing: 0.08em; font-size: var(--step--1); }
 .theme-card h3 { margin: 0.25rem 0 0.35rem; }
 .theme-card h3 a { text-decoration: none; color: var(--blue-ink); }
@@ -248,6 +250,10 @@ strong { font-weight: 700; }
 /* Research page themes ---------------------------------------------------- */
 .theme-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.5rem; }
 .theme { background: var(--bg-elev); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(1.5rem, 4vw, 2.5rem); scroll-margin-top: 6rem; }
+.theme--with-art { display: grid; gap: 1.5rem; align-items: center; }
+@media (min-width: 760px) { .theme--with-art { grid-template-columns: 1fr 300px; gap: 2.5rem; } .theme__art { order: 2; } }
+.theme__art { background: var(--blue-tint); border-radius: var(--radius); padding: 1.25rem; }
+.theme__art img { width: 100%; height: auto; }
 .theme__head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 0.75rem; }
 .theme__head h2 { margin: 0; font-size: var(--step-2); }
 .theme__index { font-weight: 700; color: var(--gold-text); letter-spacing: 0.08em; }

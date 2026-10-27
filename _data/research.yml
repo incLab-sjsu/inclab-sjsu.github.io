@@ -1,7 +1,9 @@
 # Research themes. Shown as cards on the home page and as sections on /research/, in this order.
-# Each theme: id (URL anchor), title, summary (one sentence), details (one short, general paragraph).
+# Each theme: id (URL anchor), image (illustration or photo, 16:10 works best), title, summary (one sentence),
+#             details (one short, general paragraph).
 # Keep the text broad: directions only, no specific methods or study questions.
 - id: aging-fatigue
+  image: /assets/img/research/aging-fatigue.svg
   title: Aging, fatigue, and fall risk
   summary: How aging and fatigue change the way people stand and walk, and what that means for staying safe and mobile.
   details:
@@ -10,6 +12,7 @@
       ways to recognize risk early.
 
 - id: brain-movement
+  image: /assets/img/research/brain-movement.svg
   title: Brain and behavior in movement control
   summary: How the nervous system and muscles organize posture and gait, and what movement reveals about that control.
   details:
@@ -18,6 +21,7 @@
       control adapts, and when it begins to fail.
 
 - id: intelligent-assessment
+  image: /assets/img/research/intelligent-assessment.svg
   title: Intelligent movement assessment
   summary: AI-integrated and wearable technologies that bring neuromotor assessment beyond the laboratory.
   details:
@@ -26,6 +30,7 @@
       bring neuromotor assessment into everyday settings.
 
 - id: neurodiversity-neurodegeneration
+  image: /assets/img/research/neurodiversity-neurodegeneration.svg
   title: Neurodiversity and neurodegeneration across the lifespan
   summary: Motor function in neurodivergent populations (such as autism and Down syndrome) and in conditions that change the nervous system over time.
   details:

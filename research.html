@@ -19,7 +19,11 @@ permalink: /research/
   <div class="container">
     <ul class="theme-list">
       {%- for theme in site.data.research %}
-      <li class="theme" id="{{ theme.id }}">
+      <li class="theme{% if theme.image %} theme--with-art{% endif %}" id="{{ theme.id }}">
+        {%- if theme.image %}
+        <div class="theme__art"><img src="{{ theme.image | relative_url }}" alt="" width="320" height="200" loading="lazy"></div>
+        {%- endif %}
+        <div class="theme__text">
         <div class="theme__head">
           <span class="theme__index" aria-hidden="true">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
           <h2>{{ theme.title }}</h2>
@@ -37,6 +41,7 @@ permalink: /research/
             {%- endfor %}
           </ul>
           {%- endif %}
+        </div>
         </div>
       </li>
       {%- endfor %}
