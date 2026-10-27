@@ -39,3 +39,24 @@ members:
     surname: Si
     role: Lecturer
     institution: Hefei University, Hefei, China
+
+# Map pins shown above the list: approximate city locations in decimal degrees.
+# `home: true` marks the lab. `anchor: end` puts the label to the left of the pin; dx/dy nudge the label.
+pins:
+  - label: San José, USA
+    lat: 37.34
+    lon: -121.89
+    home: true
+    dx: 10
+    dy: -8
+  - label: Xi'an, China
+    lat: 34.34
+    lon: 108.94
+    anchor: end
+    dx: -10
+    dy: -8
+  - label: Hefei, China
+    lat: 31.82
+    lon: 117.23
+    dx: 10
+    dy: 20

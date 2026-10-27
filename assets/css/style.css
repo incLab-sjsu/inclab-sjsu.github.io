@@ -211,6 +211,24 @@ strong { font-weight: 700; }
 .theme-card h3 a:hover { color: var(--blue); text-decoration: underline; }
 .theme-card p { margin: 0; color: var(--ink-2); }
 
+/* World map (collaborators) ---------------------------------------------- */
+.world-map { margin: 0 0 2.5rem; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1rem; }
+.world-map svg { display: block; width: 100%; height: auto; }
+.world-map__land { fill: #D7E2EE; stroke: #B6C7DB; stroke-width: 0.6; }
+.world-map__dot { fill: var(--gold); stroke: var(--blue-ink); stroke-width: 1.5; }
+.world-map__halo { fill: var(--gold); opacity: 0.25; transform-origin: center; transform-box: fill-box; animation: map-pulse 2.8s ease-out infinite; }
+.world-map__pin--home .world-map__dot { fill: var(--blue); stroke: var(--gold); stroke-width: 2; }
+.world-map__pin--home .world-map__halo { fill: var(--blue); }
+.world-map__label { font-family: var(--font); font-size: 13px; font-weight: 700; fill: var(--blue-ink); paint-order: stroke; stroke: #fff; stroke-width: 3px; stroke-linejoin: round; }
+@keyframes map-pulse { 0% { transform: scale(0.6); opacity: 0.45; } 100% { transform: scale(2.2); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .world-map__halo { animation: none; opacity: 0.2; } }
+@media (max-width: 640px) {
+  .world-map { padding: 0.5rem; }
+  .world-map__label { font-size: 22px; stroke-width: 5px; }
+  .world-map__dot { r: 7; stroke-width: 2.5; }
+  .world-map__halo { r: 16; }
+}
+
 /* Member cards ----------------------------------------------------------- */
 .member-card { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
 .avatar {

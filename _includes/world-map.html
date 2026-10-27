@@ -1,0 +1,22 @@
+{%- comment -%}
+World map (equirectangular, 1000 px wide, 2.7778 px per degree) with pins from _data/collaborators.yml.
+Land outline: Natural Earth via the world-atlas package (public domain), simplified to 110 m.
+{%- endcomment -%}
+{%- assign pins = site.data.collaborators.pins -%}
+{%- if pins and pins.size > 0 -%}
+<figure class="world-map">
+  <svg viewBox="0 16.7 1000 388.9" role="img" aria-labelledby="world-map-title" preserveAspectRatio="xMidYMid meet">
+    <title id="world-map-title">World map showing the lab in San José and collaborators' cities</title>
+    <path class="world-map__land" d="{% include map/land-path.txt %}"/>
+    {%- for p in pins %}
+    {%- assign x = p.lon | plus: 180.0 | times: 2.7778 | round: 1 %}
+    {%- assign y = 90.0 | minus: p.lat | times: 2.7778 | round: 1 %}
+    <g class="world-map__pin{% if p.home %} world-map__pin--home{% endif %}" transform="translate({{ x }} {{ y }})">
+      <circle class="world-map__halo" r="11"/>
+      <circle class="world-map__dot" r="4.5"/>
+      <text class="world-map__label" x="{{ p.dx | default: 9 }}" y="{{ p.dy | default: -7 }}"{% if p.anchor %} text-anchor="{{ p.anchor }}"{% endif %}>{{ p.label }}</text>
+    </g>
+    {%- endfor %}
+  </svg>
+</figure>
+{%- endif -%}
