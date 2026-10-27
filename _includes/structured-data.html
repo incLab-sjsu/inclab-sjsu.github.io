@@ -1,0 +1,49 @@
+{%- comment -%}
+Structured data for search engines: the lab as an organization on the home page, Dr. Qu as a person on the People page.
+{%- endcomment -%}
+{%- if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  "name": "Intelligent Neuromotor Control Lab",
+  "alternateName": ["INC Lab", "INCL", "Intelligent Neuromotor Control Laboratory"],
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "logo": "{{ '/assets/img/favicon/icon-512.png' | absolute_url }}",
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "San José State University",
+    "alternateName": ["SJSU", "San Jose State University"],
+    "url": "https://www.sjsu.edu/",
+    "department": { "@type": "Organization", "name": "Department of Kinesiology", "url": "{{ site.contact.department_url }}" }
+  },
+  "founder": { "@type": "Person", "name": "Hang Qu", "url": "{{ '/people/' | absolute_url }}" },
+  "address": { "@type": "PostalAddress", "streetAddress": "{{ site.contact.address_line1 }}", "addressLocality": "San José", "addressRegion": "CA", "postalCode": "95192", "addressCountry": "US" },
+  "email": "{{ site.contact.email }}",
+  "keywords": "neuromotor control, motor control, biomechanics, gait, balance, aging, fatigue, neurodiversity, neurodegeneration, wearable sensing, machine learning, digital health"
+}
+</script>
+{%- elsif page.url == "/people/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hang Qu",
+  "alternateName": ["Hang Qu, PhD", "Dr. Hang Qu", "Frankie Qu"],
+  "honorificSuffix": "PhD",
+  "jobTitle": "Assistant Professor",
+  "worksFor": { "@type": "CollegeOrUniversity", "name": "San José State University", "alternateName": "SJSU", "url": "https://www.sjsu.edu/" },
+  "affiliation": { "@type": "ResearchOrganization", "name": "Intelligent Neuromotor Control Lab", "url": "{{ site.url }}{{ site.baseurl }}/" },
+  "url": "{{ '/people/' | absolute_url }}",
+  "image": "{{ site.data.people.pi.photo | absolute_url }}",
+  "email": "{{ site.contact.email }}",
+  "sameAs": ["{{ site.contact.faculty_url }}"],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Iowa State University" },
+    { "@type": "CollegeOrUniversity", "name": "The University of Tennessee, Knoxville" },
+    { "@type": "CollegeOrUniversity", "name": "Shanghai University of Sport" }
+  ],
+  "knowsAbout": ["motor control", "biomechanics", "gait and balance", "aging", "fatigue", "neurodiversity", "wearable sensing", "machine learning"]
+}
+</script>
+{%- endif %}

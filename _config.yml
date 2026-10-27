@@ -7,7 +7,8 @@ title: Intelligent Neuromotor Control Lab
 short_title: INC Lab
 tagline: Understanding how the nervous system controls movement across the lifespan
 description: >-
-  The Intelligent Neuromotor Control Lab (INC Lab) at San José State University studies how the
+  The Intelligent Neuromotor Control Lab (INC Lab), directed by Dr. Hang Qu at San José State University
+  (SJSU), studies how the
   nervous system controls posture, gait, and balance, and how that control changes with aging,
   fatigue, neurodiversity, and neurodegenerative and neurological conditions. Based in Silicon Valley, the lab applies artificial
   intelligence and machine learning to movement data, with the goal of developing wearable digital health
@@ -27,6 +28,11 @@ baseurl: ""
 
 author:
   name: Hang Qu
+
+# Search engines: paste the verification token from Google Search Console (and Bing Webmaster Tools) here.
+# webmaster_verifications:
+#   google: PASTE_TOKEN_HERE
+#   bing: PASTE_TOKEN_HERE
 
 # Contact details used in the footer and on the Join page
 contact:
