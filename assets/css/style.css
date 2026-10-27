@@ -196,12 +196,12 @@ strong { font-weight: 700; }
 }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 80px; padding-block: 0.6rem; }
 .brand { display: inline-flex; align-items: center; flex-shrink: 0; }
-.brand__art--dark { display: none; }
-:root[data-theme="dark"] .brand__art--light { display: none; }
-:root[data-theme="dark"] .brand__art--dark { display: block; }
+.brand .brand__art--dark { display: none; }
+:root[data-theme="dark"] .brand .brand__art--light { display: none; }
+:root[data-theme="dark"] .brand .brand__art--dark { display: block; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .brand__art--light { display: none; }
-  :root:not([data-theme="light"]) .brand__art--dark { display: block; }
+  :root:not([data-theme="light"]) .brand .brand__art--light { display: none; }
+  :root:not([data-theme="light"]) .brand .brand__art--dark { display: block; }
 }
 .site-header__controls { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
 /* Light/dark switch: an iOS-style sliding toggle. Checked (knob right) = dark. */
