@@ -55,7 +55,15 @@ collapsed behind a "Show earlier work" toggle. Conference presentations use the 
 1. Push this repository to GitHub.
 2. In the repository: **Settings → Pages → Build and deployment → Source: Deploy from a branch**,
    branch `main`, folder `/ (root)`. Save.
-3. The site appears at `https://inclab-sjsu.github.io/` within a couple of minutes.
+3. The site appears at `https://hangqulab.org/` within a couple of minutes. The old address
+   `https://inclab-sjsu.github.io/` redirects there automatically.
+
+### Custom domain
+
+`hangqulab.org` is registered at Cloudflare. The `CNAME` file in this repository tells GitHub Pages to
+serve the site at that domain. In Cloudflare: two proxied CNAME records (`@` and `www`) point to
+`inclab-sjsu.github.io`, SSL/TLS mode is **Full**, and **Always Use HTTPS** is on. Keep auto-renew on
+in Cloudflare; if the domain lapses the site goes offline.
 
 The address must match `url` and `baseurl` in `_config.yml`:
 

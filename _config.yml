@@ -18,12 +18,14 @@ timezone: America/Los_Angeles
 logo: /assets/img/favicon/icon-512.png
 
 # DEPLOYMENT ADDRESS ---------------------------------------------------------
-# Organization root site (current):        https://inclab-sjsu.github.io/
+# Custom domain (current), served by GitHub Pages behind Cloudflare: https://hangqulab.org/
+#   url: "https://hangqulab.org"   baseurl: ""   plus a CNAME file containing hangqulab.org
+# Organization root site without the custom domain: https://inclab-sjsu.github.io/
 #   url: "https://inclab-sjsu.github.io"   baseurl: ""
 # Project site under an account:           https://<account>.github.io/<repository>/
 #   url: "https://<account>.github.io"     baseurl: "/<repository>"
 # Custom domain (after adding a CNAME file): url: "https://your-domain"  baseurl: ""
-url: "https://inclab-sjsu.github.io"
+url: "https://hangqulab.org"
 baseurl: ""
 
 author:
