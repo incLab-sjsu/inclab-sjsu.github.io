@@ -216,6 +216,12 @@ strong { font-weight: 700; }
 .world-map { margin: 0 0 2.5rem; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1rem; }
 .world-map svg { display: block; width: 100%; height: auto; }
 .world-map__land { fill: #D7E2EE; stroke: #B6C7DB; stroke-width: 0.6; }
+.world-map__borders { fill: none; stroke: #C3D0DF; stroke-width: 0.45; opacity: 0.55; }
+.world-map__continent { display: none; font-size: 11px; letter-spacing: 0.14em; }
+@media (max-width: 899px) {
+  .world-map__country { display: none; }
+  .world-map__continent, .world-map__ocean, .world-map__keep { display: block; }
+}
 .world-map__dot { fill: var(--blue); stroke: #fff; stroke-width: 1.5; }
 .world-map__halo { fill: var(--blue); opacity: 0.25; transform-origin: center; transform-box: fill-box; animation: map-pulse 3s ease-out infinite; }
 /* Home pin (the lab): larger, gold, glowing, with a twinkling spark */
@@ -232,7 +238,8 @@ strong { font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { .world-map__halo, .world-map__glow, .world-map__spark { animation: none; } .world-map__halo { opacity: 0.2; } .world-map__spark { transform: scale(0.8); opacity: 0.9; } }
 @media (max-width: 640px) {
   .world-map { padding: 0.5rem; }
-  .world-map__country { font-size: 11px; }
+  .world-map__country { font-size: 12px; }
+  .world-map__continent { font-size: 13px; }
   .world-map__dot { r: 6; stroke-width: 2; }
   .world-map__halo { r: 14; }
   .world-map__pin--home .world-map__dot { r: 10; }

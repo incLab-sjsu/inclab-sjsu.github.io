@@ -1,6 +1,7 @@
 {%- comment -%}
 World map (equirectangular, 1000 px wide, 2.7778 px per degree) with pins and country names from _data/collaborators.yml.
-Land outline: Natural Earth via the world-atlas package (public domain), simplified to 110 m.
+Land outline and country borders: Natural Earth via the world-atlas package (public domain), simplified to 110 m.
+Country names show on wide screens; on narrow screens only continents, oceans, and entries marked keep: true.
 {%- endcomment -%}
 {%- assign pins = site.data.collaborators.pins -%}
 {%- if pins and pins.size > 0 -%}
@@ -8,10 +9,11 @@ Land outline: Natural Earth via the world-atlas package (public domain), simplif
   <svg viewBox="0 16.7 1000 388.9" role="img" aria-labelledby="world-map-title" preserveAspectRatio="xMidYMid meet">
     <title id="world-map-title">World map showing the lab in San José and collaborators' cities{% for p in pins %}{% unless p.home %}, {{ p.name }}{% endunless %}{% endfor %}</title>
     <path class="world-map__land" d="{% include map/land-path.txt %}"/>
+    <path class="world-map__borders" d="{% include map/borders-path.txt %}"/>
     {%- for c in site.data.collaborators.countries %}
     {%- assign cx = c.lon | plus: 180.0 | times: 2.7778 | round: 1 %}
     {%- assign cy = 90.0 | minus: c.lat | times: 2.7778 | round: 1 %}
-    <text class="world-map__country{% if c.kind == 'ocean' %} world-map__ocean{% endif %}" x="{{ cx }}" y="{{ cy }}" text-anchor="{{ c.anchor | default: 'middle' }}">{{ c.name }}</text>
+    <text class="world-map__country{% if c.kind == 'ocean' %} world-map__ocean{% elsif c.kind == 'continent' %} world-map__continent{% endif %}{% if c.keep %} world-map__keep{% endif %}" x="{{ cx }}" y="{{ cy }}" text-anchor="{{ c.anchor | default: 'middle' }}">{{ c.name }}</text>
     {%- endfor %}
     {%- for p in pins %}
     {%- assign x = p.lon | plus: 180.0 | times: 2.7778 | round: 1 %}
