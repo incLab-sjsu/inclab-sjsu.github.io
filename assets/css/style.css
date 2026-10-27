@@ -3,9 +3,15 @@
    Toned light base with "night sky" bands in SJSU Blue (#0055A2) and SJSU Gold (#E5A823).
    ========================================================================== */
 :root {
-  --bg: #E9EDF2;          /* page background: soft grey-blue, not white */
-  --bg-elev: #F5F7F9;     /* cards, header: off-white */
-  --bg-sunk: #DFE5EC;     /* quieter alternate sections */
+  --bg: #F4F5F7;          /* page background: soft white */
+  --bg-elev: #FBFBFC;     /* cards, header */
+  --bg-sunk: #ECEEF2;     /* quieter alternate sections */
+  --band-bg: rgba(251, 251, 252, 0.55);
+  --page-header-bg: linear-gradient(180deg, rgba(229, 168, 35, 0.08) 0%, rgba(244, 245, 247, 0) 100%);
+  --sky-glow: radial-gradient(70% 55% at 100% 0%, rgba(229, 168, 35, 0.13) 0%, rgba(229, 168, 35, 0) 70%),
+              radial-gradient(60% 45% at 0% 100%, rgba(229, 168, 35, 0.08) 0%, rgba(229, 168, 35, 0) 70%);
+  --star-min: 0.35;
+  --star-max: 0.95;
   /* very faint paper grain, light theme only */
   --texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.16 0 0 0 0 0.26 0 0 0 0 0.42 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   --ink: #16213A;
@@ -23,7 +29,7 @@
   --night-2: #0B2A52;
   --night-ink: #EAF0F8;
   --night-ink-2: #C3D0E3;
-  --header-bg: rgba(245, 247, 249, 0.92);
+  --header-bg: rgba(251, 251, 252, 0.9);
   --heading: var(--blue-ink);
   --title-link: var(--blue);
   --title-link-hover: var(--blue-deep);
@@ -76,6 +82,12 @@
   --map-label: #9FB1CC;
   --map-ocean: #6F84A6;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.35);
+  --band-bg: rgba(22, 39, 70, 0.55);
+  --page-header-bg: linear-gradient(180deg, rgba(229, 168, 35, 0.07) 0%, rgba(15, 27, 51, 0) 100%);
+  --sky-glow: radial-gradient(70% 55% at 100% 0%, rgba(229, 168, 35, 0.10) 0%, rgba(229, 168, 35, 0) 70%),
+              radial-gradient(60% 45% at 0% 100%, rgba(0, 85, 162, 0.22) 0%, rgba(0, 85, 162, 0) 70%);
+  --star-min: 0.25;
+  --star-max: 0.85;
   --texture: none;
   color-scheme: dark;
 }
@@ -105,6 +117,12 @@
   --map-label: #9FB1CC;
   --map-ocean: #6F84A6;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.35);
+  --band-bg: rgba(22, 39, 70, 0.55);
+  --page-header-bg: linear-gradient(180deg, rgba(229, 168, 35, 0.07) 0%, rgba(15, 27, 51, 0) 100%);
+  --sky-glow: radial-gradient(70% 55% at 100% 0%, rgba(229, 168, 35, 0.10) 0%, rgba(229, 168, 35, 0) 70%),
+              radial-gradient(60% 45% at 0% 100%, rgba(0, 85, 162, 0.22) 0%, rgba(0, 85, 162, 0) 70%);
+  --star-min: 0.25;
+  --star-max: 0.85;
   --texture: none;
   color-scheme: dark;
   }
@@ -123,6 +141,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img, picture, svg { max-width: 100%; height: auto; display: block; }
+
+/* Page sky: soft gold glow and faint gold stars behind all content. Each layer breathes slowly and
+   out of step with the others, so stars brighten and fade gradually rather than blinking. */
+.sky { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: var(--sky-glow); }
+.sky span { position: absolute; inset: 0; background-repeat: repeat; opacity: var(--star-min); animation: sky-breathe 11s ease-in-out infinite alternate; }
+.sky__a { background-image: url("../img/sky-a.svg"); background-size: 640px 640px; animation-duration: 9s; }
+.sky__b { background-image: url("../img/sky-b.svg"); background-size: 880px 880px; background-position: 210px 140px; animation-duration: 13s; animation-delay: -5s; }
+.sky__c { background-image: url("../img/sky-c.svg"); background-size: 1120px 1120px; background-position: 470px 330px; animation-duration: 17s; animation-delay: -11s; }
+@keyframes sky-breathe { from { opacity: var(--star-min); } to { opacity: var(--star-max); } }
+@media (prefers-reduced-motion: reduce) { .sky span { animation: none; opacity: calc((var(--star-min) + var(--star-max)) / 2); } }
 a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
 a:hover { color: var(--blue-deep); }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
@@ -281,7 +309,7 @@ strong { font-weight: 700; }
 
 /* Page header (inner pages) ---------------------------------------------- */
 .page-header {
-  background: linear-gradient(180deg, var(--blue-tint) 0%, var(--bg) 100%);
+  background: var(--page-header-bg);
   border-bottom: 1px solid var(--rule);
   padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(1.5rem, 4vw, 2.5rem);
 }
@@ -290,7 +318,7 @@ strong { font-weight: 700; }
 
 /* Sections --------------------------------------------------------------- */
 .section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
-.section--elev { background: var(--bg-elev); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.section--elev { background: var(--band-bg); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .section--elev + .section--elev { border-top: 0; }
 .section__head { max-width: 60ch; margin-bottom: 2rem; }
 .section__head h2 { margin-bottom: 0.3em; }
@@ -551,7 +579,7 @@ strong { font-weight: 700; }
 
 /* Print ------------------------------------------------------------------ */
 @media print {
-  .site-header, .site-footer, .nav-toggle, .section--cta, .hero__mark, .skip-link { display: none !important; }
+  .site-header, .site-footer, .nav-toggle, .section--cta, .hero__mark, .skip-link, .sky { display: none !important; }
   body { font-size: 11pt; color: #000; background: #fff; }
   .night, .night * { color: #000 !important; }
   .night { background: #fff !important; }
