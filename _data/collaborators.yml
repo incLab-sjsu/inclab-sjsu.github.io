@@ -56,12 +56,49 @@ pins:
     lat: 31.82
     lon: 117.23
 
-# Country names printed on the map (rough placement). `anchor: end` ends the text at the given point.
+# Names printed on the map (rough placement, like a general world map). lat/lon are approximate centroids.
+# Optional: anchor (start/middle/end, default middle), kind: ocean (lighter italic style).
 countries:
-  - name: United States
-    lat: 41
-    lon: -96
-  - name: China
-    lat: 39
-    lon: 97
-    anchor: end
+  - { name: Canada, lat: 58, lon: -100 }
+  - { name: United States, lat: 39, lon: -98 }
+  - { name: Mexico, lat: 24, lon: -103 }
+  - { name: Greenland, lat: 72, lon: -42 }
+  - { name: Colombia, lat: 4, lon: -73 }
+  - { name: Peru, lat: -10, lon: -75 }
+  - { name: Brazil, lat: -10, lon: -53 }
+  - { name: Chile, lat: -30, lon: -72, anchor: end }
+  - { name: Argentina, lat: -37, lon: -64 }
+  - { name: United Kingdom, lat: 54.5, lon: -3, anchor: end }
+  - { name: France, lat: 46.5, lon: 2.5 }
+  - { name: Spain, lat: 40, lon: -3.7 }
+  - { name: Germany, lat: 51, lon: 10.5 }
+  - { name: Italy, lat: 42.5, lon: 12.5 }
+  - { name: Ukraine, lat: 49, lon: 31 }
+  - { name: Turkey, lat: 39, lon: 35 }
+  - { name: Russia, lat: 62, lon: 90 }
+  - { name: Kazakhstan, lat: 48, lon: 67 }
+  - { name: Mongolia, lat: 46.5, lon: 104 }
+  - { name: China, lat: 37, lon: 97 }
+  - { name: India, lat: 22, lon: 78.5 }
+  - { name: Pakistan, lat: 30, lon: 69 }
+  - { name: Iran, lat: 32.5, lon: 54 }
+  - { name: Saudi Arabia, lat: 24, lon: 45 }
+  - { name: Thailand, lat: 15.5, lon: 101 }
+  - { name: Indonesia, lat: -2, lon: 115 }
+  - { name: Philippines, lat: 12, lon: 122 }
+  - { name: Japan, lat: 36.5, lon: 138 }
+  - { name: Australia, lat: -25, lon: 134 }
+  - { name: New Zealand, lat: -42, lon: 172, anchor: end }
+  - { name: Algeria, lat: 28, lon: 2.6 }
+  - { name: Libya, lat: 27, lon: 17 }
+  - { name: Egypt, lat: 27, lon: 30 }
+  - { name: Niger, lat: 17, lon: 9 }
+  - { name: Nigeria, lat: 9.5, lon: 8 }
+  - { name: Sudan, lat: 15, lon: 30 }
+  - { name: Ethiopia, lat: 9, lon: 40 }
+  - { name: DR Congo, lat: -3, lon: 23.5 }
+  - { name: Angola, lat: -12, lon: 17.5 }
+  - { name: South Africa, lat: -29, lon: 24 }
+  - { name: Pacific Ocean, lat: 0, lon: -150, kind: ocean }
+  - { name: Atlantic Ocean, lat: 20, lon: -32, kind: ocean }
+  - { name: Indian Ocean, lat: -22, lon: 80, kind: ocean }
