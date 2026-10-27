@@ -1,22 +1,46 @@
-# Publications shown on /publications/, grouped by year automatically (newest first).
-# Fields: authors (write the PI as "Qu H" so it is bolded), year (a plain number, no quotes), title, journal, volume, pages,
-#         doi (preferred) or url, note (optional, e.g. "Preprint"),
-#         links (optional list of {label, url}, e.g. open-access copy, lay summary, data).
-# Years follow the version of record.
-- authors: "Li J, Qu H, Chou L-S"
+# Journal articles, preprints, and manuscripts under review, shown in the left column of /publications/.
+# Grouped by year automatically (newest first); within a year, entries keep the order written here.
+# Fields: authors (write the PI as "Qu H" so it is bolded), year (a plain number, no quotes), title,
+#         journal (omit while under review), volume, pages, doi (preferred) or url,
+#         note (optional, e.g. "Under review" or "Preprint"),
+#         links (optional list of {label, url}, e.g. open-access copy, lay summary).
+# Source: Hang Qu CV, October 2026.
+
+# Under review (2026)
+- authors: "Qu H, Terza M, Christensen D, Gemmell HM, Shirley DJ, Parks EM, Orlando A-M, Karmakar B, Shafer RL, Wang Z"
   year: 2026
-  title: "Impact of physical fatigue on lower-limb inter-joint coordination during overground and treadmill walking"
-  journal: World Scientific Annual Review of Biomechanics
-  doi: 10.1142/S2810958926500019
+  title: "Increased gait variability during walking and altered postural control during step initiation in community-dwelling middle-aged and older autistic adults"
+  note: Under review
 
 - authors: "Shafer RL, Wang J, Qu H, Simpson JP, Terza M, Shirley DJ, McKinney WS, Pulver S, Orlando A-M, Romero RA, Karmakar B, Mosconi MW, Wang Z"
   year: 2026
   title: "Gait variability development in autistic individuals across childhood and adulthood"
   journal: Research Square
   doi: 10.21203/rs.3.rs-9622252/v1
-  note: Preprint
+  note: Preprint, under review
 
-- authors: "Wang Z, Qu H, Christensen D, Gemmell HM, Parks E, Wetherington KE, Orlando A-M, Romero RA, Karmakar B, Vaillancourt DE"
+- authors: "Liang S, Liu T, Qu H, Banyard H, Ren T, Yuan G, Xu N, Chen W, Zhu W, Sun Y"
+  year: 2026
+  title: "Effects of individualized power-based resisted sled sprint training on lower-limb explosive power and sprint biomechanical characteristics in sub-elite sprinters"
+  note: Under review
+
+# Published
+- authors: "Li J, Qu H, Chou L-S"
+  year: 2026
+  title: "Impact of physical fatigue on lower-limb inter-joint coordination during overground and treadmill walking"
+  journal: World Scientific Annual Review of Biomechanics
+  pages: "2650001"
+  doi: 10.1142/S2810958926500019
+
+- authors: "Wang A, Qu H, Wang L, Chen X, Zhu W, Sun Y"
+  year: 2026
+  title: "Disruption of ankle control strategies by exercise-induced fatigue during stair descent in athletes with chronic ankle instability"
+  journal: Archives of Physical Medicine and Rehabilitation
+  volume: "107(7)"
+  pages: "1526-1534"
+  doi: 10.1016/j.apmr.2025.10.020
+
+- authors: "Wang Z, Qu H, Christensen D, Gemmell HM, Parks EM, Wetherington KE, Orlando A-M, Romero RA, Karmakar B, Vaillancourt DE"
   year: 2026
   title: "Atypical visually guided precision grip control in middle-aged and older autistic adults"
   journal: Autism Research
@@ -26,14 +50,6 @@
   links:
     - label: Open access (PMC)
       url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12931594/
-
-- authors: "Wang A, Qu H, Wang L, Chen X, Zhu W, Sun Y"
-  year: 2026
-  title: "Disruption of ankle control strategies by exercise-induced fatigue during stair descent in athletes with chronic ankle instability"
-  journal: Archives of Physical Medicine and Rehabilitation
-  volume: "107(7)"
-  pages: "1526-1534"
-  doi: 10.1016/j.apmr.2025.10.020
 
 - authors: "Qu H, Wang J, Shirley DJ, Gemmell HM, Christensen D, Orlando A-M, Romero RA, Zielinski BA, Wang Z"
   year: 2025
@@ -56,6 +72,14 @@
   pages: "307-312"
   doi: 10.1016/j.gaitpost.2024.01.003
 
+- authors: "Guo Z, Liu P, Yang H, Bao Y, Zhou Y, Sun M, Qu H"
+  year: 2022
+  title: "Effects of head down tilt training on carotid blood flow, psychological stress, and anxiety sensitivity in the elderly"
+  journal: International Journal of Neuropsychopharmacology
+  volume: "25(Suppl 1)"
+  pages: "A83-A84"
+  doi: 10.1093/ijnp/pyac032.113
+
 - authors: "Qu H, Zhang S, Sorochan JC, Weinhandl JT, Thoms AW, Dickson KH"
   year: 2022
   title: "Effects of synthetic turf and shock pad on impact attenuation related biomechanics during drop landing"
@@ -63,3 +87,27 @@
   volume: "21(6)"
   pages: "748-760"
   doi: 10.1080/14763141.2019.1690570
+
+- authors: "Li H, Tian P, Qu H, Lu J"
+  year: 2018
+  title: "Progress in the utility of the SARC-F scale on rapid and simple screening for sarcopenia in elderly people"
+  journal: China Sport Science and Technology
+  volume: "54(2)"
+  pages: "105-110"
+  doi: 10.16470/j.csst.201802014
+
+- authors: "Li H, Liu Y, Huang L, Yin K, Qu H"
+  year: 2017
+  title: "Application of EWGSOP consensus in evaluating elderly female patients with sarcopenia aged 70 to 79 from communities of Shanghai"
+  journal: Chinese Journal of Sports Medicine
+  volume: "36(6)"
+  pages: "506-512"
+  doi: 10.16038/j.1000-6710.2017.06.007
+
+- authors: "Li H, Liu Y, Huang L, Yin K, Qu H"
+  year: 2017
+  title: "Study on application of EWGSOP and AWGS consensus for sarcopenia in elderly community-dwelling women from Shanghai"
+  journal: China Sport Science and Technology
+  volume: "53(4)"
+  pages: "106-113"
+  doi: 10.16470/j.csst.201704015

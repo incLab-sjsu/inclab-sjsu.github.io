@@ -7,7 +7,9 @@
     {%- elsif pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>
     {%- else %}{{ pub.title }}{% endif -%}
   </span>
+  {%- if pub.journal %}
   <em class="pub__venue">{{ pub.journal }}</em>{% if pub.volume %}, {{ pub.volume }}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.
+  {%- endif %}
   {%- if pub.note %} <span class="pub__note">{{ pub.note }}</span>{% endif %}
   {%- if pub.links %}
   <span class="pub__links">

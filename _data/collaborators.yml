@@ -1,8 +1,8 @@
 # Collaborators shown on /collaborators/ as one list, in the order written here.
 # ---------------------------------------------------------------------------
-# Each entry: name, role (academic title, optional), institution,
-# photo (square, 600 x 600 px recommended, saved in assets/img/collaborators/), url (profile page, optional).
-# An entry without a photo shows initials.
+# Each entry: name, role (academic title), institution (department and university),
+# photo (square, 600 x 600 px recommended, saved in assets/img/collaborators/).
+# No personal links by design. An entry without a photo shows initials.
 # ---------------------------------------------------------------------------
 members:
   - name: Li Jin
@@ -21,12 +21,11 @@ members:
     role: Professor
     institution: School of Physical Education, Shaanxi Normal University, Xi'an, China
     photo: /assets/img/collaborators/yuliang-sun.jpg
-    url: https://faculty.snnu.edu.cn/sunyuliang1/en/index.htm
   - name: Wenfei Zhu
     role: Professor
     institution: School of Physical Education, Shaanxi Normal University, Xi'an, China
-    url: https://faculty.snnu.edu.cn/zhuwenfei/zh_CN/index.htm
   - name: Lei Jiang
+    role: Associate Professor
     institution: Anhui Medical University, Hefei, China
   - name: Jialan Si
     institution: Hefei University, Hefei, China

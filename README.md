@@ -1,6 +1,6 @@
 # Intelligent Neuromotor Control Lab website
 
-Public website of the Intelligent Neuromotor Control Lab (INCL), Department of Kinesiology,
+Public website of the Intelligent Neuromotor Control Lab (INC Lab), Department of Kinesiology,
 San José State University. PI: Dr. Hang Qu.
 
 The site is a plain [Jekyll](https://jekyllrb.com) site that **GitHub Pages builds automatically**.

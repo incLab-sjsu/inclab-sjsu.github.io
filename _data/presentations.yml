@@ -1,32 +1,145 @@
-# Conference presentations and posters shown on /publications/ (right column), newest first.
-# Fields: authors, year (a plain number, no quotes), title, venue (meeting, city, month), kind (Podium or Poster),
+# Conference presentations and posters, shown in the right column of /publications/.
+# Grouped by year automatically (newest first); within a year, entries keep the order written here.
+# Fields: authors, year (a plain number, no quotes), title, venue (meeting, city, dates), kind (Podium or Poster),
 #         and optionally doi or url to link the title.
+# Source: Hang Qu CV, October 2026.
+
+# 2026
+- authors: "Qu H, Shin YS, Parks EM, Orlando A-M, Vaillancourt DE, Coombes SA, Wang Z"
+  year: 2026
+  title: "Cortical-subcortical brain activation during rapid precision gripping in middle-aged and older autistic adults"
+  venue: "Gatlinburg Conference on Research and Theory in Intellectual and Developmental Disabilities, Minneapolis, MN, October 6-9, 2026"
+  kind: Podium
+- authors: "Parks EM, Qu H, Gemmell HM, Orlando A-M, Terza M, Wang Z"
+  year: 2026
+  title: "Postural transition and manual dexterity performance in middle-aged and older autistic adults"
+  venue: "Gatlinburg Conference on Research and Theory in Intellectual and Developmental Disabilities, Minneapolis, MN, October 6-9, 2026"
+  kind: Poster
+
+# 2025
+- authors: "Qu H, Li J, Chou L-S"
+  year: 2025
+  title: "Differential impacts of mental fatigue on gait and cognition in young and older adults"
+  venue: "International Conference on Movement Science and Technology (ICMST 2025), Tokyo, Japan, November 28-30, 2025"
+  kind: Poster
+- authors: "Qu H, Terza M, Gemmell HM, Shirley DJ, Orlando A-M, Karmakar B, Wang Z"
+  year: 2025
+  title: "Persistent deviations in non-constrained walking and grooved pegboard test performance in middle-aged and older autistic adults"
+  venue: "Annual Meeting of the Society for Neuroscience (SfN 2025), San Diego, CA, November 15-19, 2025"
+  kind: Poster
+- authors: "Parks EM, Qu H, Christensen D, Gemmell HM, Wetherington KE, Orlando A-M, Romero RA, Karmakar B, Vaillancourt DE, Wang Z"
+  year: 2025
+  title: "Atypical visually guided precision grip control and its association with perceived physical health quality in middle-aged and older autistic adults"
+  venue: "Annual Meeting of the Society for Neuroscience (SfN 2025), San Diego, CA, November 15-19, 2025"
+  kind: Poster
 - authors: "Qu H, Li J, Chou L-S"
   year: 2025
   title: "Age-specific adaptations to mental fatigue in dual-task walking of varying complexity"
-  venue: "49th Annual Meeting of the American Society of Biomechanics, Pittsburgh, PA, August 2025"
+  venue: "49th Annual Meeting of the American Society of Biomechanics (ASB 2025), Pittsburgh, PA, August 13-16, 2025"
   kind: Podium
-
 - authors: "Qu H, Li J, Chou L-S"
   year: 2025
   title: "Age-related differences in mental and physical fatigue effects on working memory and gait balance"
-  venue: "XXX Congress of the International Society of Biomechanics, Stockholm, Sweden, July 2025"
+  venue: "XXX Congress of the International Society of Biomechanics (ISB 2025), Stockholm, Sweden, July 27-31, 2025"
   kind: Podium
+- authors: "Li J, Qu H, Chou L-S"
+  year: 2025
+  title: "The differential effects of mental fatigue on inter-joint coordination in young and older adults"
+  venue: "XXX Congress of the International Society of Biomechanics (ISB 2025), Stockholm, Sweden, July 27-31, 2025"
+  kind: Poster
+- authors: "Qu H, Wang J, Shirley DJ, Gemmell HM, Christensen D, Orlando A-M, Romero RA, Zielinski BA, Wang Z"
+  year: 2025
+  title: "Atypical postural control persists through adulthood in autism spectrum disorder (ASD): static and dynamic postural control deviations in autistic adults ages 30-73"
+  venue: "Annual Meeting of the International Society for Autism Research (INSAR 2025), Seattle, WA, April 30 - May 3, 2025"
+  kind: Poster
 
+# 2024
 - authors: "Li J, Qu H, Chou L-S"
   year: 2024
   title: "Effects of physical fatigue on lower limb inter-joint coordination under different walking conditions"
-  venue: "48th Annual Meeting of the American Society of Biomechanics, Madison, WI, August 2024"
+  venue: "48th Annual Meeting of the American Society of Biomechanics (ASB 2024), Madison, WI, August 5-8, 2024"
   kind: Poster
-
-- authors: "Qu H, Liang Y-P, Chou L-S"
+- authors: "Qu H, Li J, Stegemöller EL, Chou L-S"
   year: 2024
   title: "Evaluation of laboratory-driven mental fatiguing protocol using EEG and self-reported fatigue scale"
-  venue: "American College of Sports Medicine Annual Meeting, Boston, MA, May 2024"
+  venue: "American College of Sports Medicine Annual Meeting; abstract 918 in Medicine & Science in Sports & Exercise, 56(10S), 327-328"
   kind: Poster
+  doi: 10.1249/01.mss.0001055376.92311.1b
+- authors: "Li J, Qu H, Wu CF, Chou L-S"
+  year: 2024
+  title: "Effects of physical fatigue on lower limb inter-joint coordination during constant speed treadmill walking"
+  venue: "American College of Sports Medicine Annual Meeting; abstract 2739 in Medicine & Science in Sports & Exercise, 56(10S), 1018-1019"
+  kind: Poster
+  doi: 10.1249/01.mss.0001061352.68784.bd
+- authors: "Qu H, Li J, Stegemöller EL, Chou L-S"
+  year: 2024
+  title: "Evaluation of laboratory-driven mental fatiguing protocol using EEG and self-reported fatigue scale"
+  venue: "Pease Family Scholar Abstracts Contest, Ames, IA, April 6, 2024"
+  kind: Podium
 
+# 2023
 - authors: "Kim HK, Qu H, Chou L-S"
   year: 2023
-  title: "Plantar pressure distribution response to various gait speeds and its relationship with gait balance in overweight adults"
-  venue: "XXIX Congress of the International Society of Biomechanics, Fukuoka, Japan, July 2023"
+  title: "Center of mass motion and plantar pressure distribution during walking in overweight individuals"
+  venue: "XXIX Congress of the International Society of Biomechanics (ISB 2023), Fukuoka, Japan, July 30 - August 3, 2023"
   kind: Poster
+
+# 2021
+- authors: "Qu H, Liang Y-P, Chou L-S"
+  year: 2021
+  title: "Effects of marker placement and sex on medial-lateral whole-body center of mass kinematics estimations during walking: a preliminary study"
+  venue: "XVI Symposium on 3-D Analysis of Human Movement, Ames, IA, May 25-28, 2021"
+  kind: Podium
+- authors: "Liang Y-P, Qu H, Chou L-S"
+  year: 2021
+  title: "Center of mass accelerations estimated by wearable sensor technology and motion capture system: are we measuring the same thing?"
+  venue: "XVI Symposium on 3-D Analysis of Human Movement, Ames, IA, May 25-28, 2021"
+  kind: Podium
+
+# 2020
+- authors: "Qu H, Liang Y-P, Chou L-S"
+  year: 2020
+  title: "Effects of marker placement and body sizes on frontal plane center of mass motion during walking: a preliminary study"
+  venue: "44th Annual Meeting of the American Society of Biomechanics (ASB 2020), virtual, August 4-7, 2020"
+  kind: Poster
+- authors: "Liang Y-P, Qu H, Chou L-S"
+  year: 2020
+  title: "Center of mass accelerations estimated by wearable sensor technology and motion capture system: are we measuring the same thing?"
+  venue: "44th Annual Meeting of the American Society of Biomechanics (ASB 2020), virtual, August 4-7, 2020"
+  kind: Poster
+
+# 2019
+- authors: "Qu H, Zhang S"
+  year: 2019
+  title: "Synthetic turf and shock pad reduced initial peak vertical ground reaction force during drop landing"
+  venue: "XXVII Congress of the International Society of Biomechanics and 43rd Annual Meeting of the American Society of Biomechanics (ISB/ASB 2019), Calgary, Canada, July 31 - August 4, 2019"
+  kind: Poster
+
+# 2017
+- authors: "Qu H, Zhang S, Sorochan J, Weinhandl JT"
+  year: 2017
+  title: "Ground reaction force of drop landing on synthetic turf and shock pads"
+  venue: "13th Annual Northwest Biomechanics Symposium (NWBS), Eugene, OR, May 19-20, 2017"
+  kind: Poster
+
+# 2015
+- authors: "Qu H, Fu W, Liu Y, Zhang S"
+  year: 2015
+  title: "A research on plantar pressure characteristics of basketball typical movements and footwear comfort design"
+  venue: "American College of Sports Medicine Annual Meeting; abstract 909 in Medicine & Science in Sports & Exercise, 47(5S), 251"
+  kind: Poster
+  doi: 10.1249/01.mss.0000477110.28510.b4
+
+# 2014
+- authors: "Yin K, Qu H, Li H, Fu W"
+  year: 2014
+  title: "Influence of knee osteoarthritis and aging on isokinetic muscle strength of the lower limbs in women"
+  venue: "1st Asian Society of Sport Biomechanics Conference, Taipei, Taiwan, September 1-5, 2014"
+  kind: Podium
+
+# 2013
+- authors: "Qu H, Fu W, Liu Y"
+  year: 2013
+  title: "A research on plantar pressure characteristics of basketball popular movements"
+  venue: "16th National Academic Conference of Biomechanics in Sport (CABS 2013), Guilin, China, October 22-24, 2013"
+  kind: Podium
