@@ -1,5 +1,6 @@
 {%- assign p = include.person -%}
 {%- assign parts = p.name | split: " " -%}
+{%- assign h = include.heading | default: "h3" -%}
 <li class="card member-card{% if p.placeholder %} member-card--placeholder{% endif %}">
   <div class="avatar" aria-hidden="true">
     {%- if p.photo %}
@@ -11,7 +12,7 @@
     {%- endif %}
   </div>
   <div class="member-card__body">
-    <h3 class="member-card__name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
+    <{{ h }} class="member-card__name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</{{ h }}>
     {%- if p.role %}<p class="member-card__role">{{ p.role }}</p>{% endif %}
     {%- if p.program %}<p class="member-card__meta">{{ p.program }}</p>{% endif %}
     {%- if p.institution %}<p class="member-card__meta">{{ p.institution }}</p>{% endif %}

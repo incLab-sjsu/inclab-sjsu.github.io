@@ -13,7 +13,7 @@ rebuilds in about a minute.
 |---|---|
 | Add or remove a lab member, move someone to alumni | `_data/people.yml` |
 | PI bio, title, links | `_data/people.yml` (the `pi:` block) |
-| Collaborators (R15 team, international) | `_data/collaborators.yml` |
+| Collaborators | `_data/collaborators.yml` |
 | Publications | `_data/publications.yml` |
 | Conference presentations | `_data/presentations.yml` |
 | Research themes (home cards and the Research page) | `_data/research.yml` |
