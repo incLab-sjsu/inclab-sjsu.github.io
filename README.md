@@ -88,10 +88,17 @@ assets/img/logo/   logo files (colour, white, gold; horizontal and square)
 index.html, research.html, people.html, collaborators.html, publications.html, join.html
 ```
 
+## Light and dark mode
+
+The site has a light and a dark theme. A visitor gets the dark theme when their device prefers dark
+mode or when their local time is between 7 pm and 7 am; the sun/moon button in the header switches
+themes and remembers the choice in that browser. Colours for both themes are the variables at the top
+of `assets/css/style.css`.
+
 ## Brand
 
 Colours follow the SJSU brand palette: SJSU Blue `#0055A2`, SJSU Gold `#E5A823`, with SJSU's web grays
-for neutrals. The typeface is Nunito Sans, which SJSU's web standards name for website headers; the
+for neutrals. The typeface is Nunito Sans (self-hosted in `assets/fonts/`, Open Font License), which SJSU's web standards name for website headers; the
 university's proprietary SJSU Spartan typeface is licensed for official sjsu.edu publications only and
 is not embedded here. The university name is always written "San José State University" with the accent,
 and "SJSU" only on second reference, following the SJSU editorial style guide. The light page base is

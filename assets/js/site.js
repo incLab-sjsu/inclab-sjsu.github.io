@@ -37,3 +37,32 @@
     timer = setTimeout(shimmer, 120);
   });
 })();
+
+(function () {
+  var root = document.documentElement;
+  var btn = document.querySelector('.theme-toggle');
+  var meta = document.querySelector('meta[name="theme-color"]');
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    if (meta) { meta.setAttribute('content', theme === 'dark' ? '#0F1B33' : '#0055A2'); }
+    if (btn) { btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'); }
+  }
+  apply(root.getAttribute('data-theme') || 'light');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('incl-theme', next); } catch (e) {}
+    });
+  }
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+      var saved = null;
+      try { saved = localStorage.getItem('incl-theme'); } catch (err) {}
+      if (saved !== 'light' && saved !== 'dark') { apply(e.matches ? 'dark' : 'light'); }
+    });
+  }
+  var before = null;
+  window.addEventListener('beforeprint', function () { before = root.getAttribute('data-theme'); apply('light'); });
+  window.addEventListener('afterprint', function () { if (before) { apply(before); } });
+})();
