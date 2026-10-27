@@ -40,12 +40,12 @@
 
 (function () {
   var root = document.documentElement;
-  var btn = document.querySelector('.theme-toggle');
+  var btn = document.querySelector('.theme-switch');
   var meta = document.querySelector('meta[name="theme-color"]');
   function apply(theme) {
     root.setAttribute('data-theme', theme);
     if (meta) { meta.setAttribute('content', theme === 'dark' ? '#0F1B33' : '#0055A2'); }
-    if (btn) { btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'); }
+    if (btn) { btn.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false'); }
   }
   apply(root.getAttribute('data-theme') || 'light');
   if (btn) {

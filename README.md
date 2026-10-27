@@ -91,8 +91,8 @@ index.html, research.html, people.html, collaborators.html, publications.html, j
 ## Light and dark mode
 
 The site has a light and a dark theme. A visitor gets the dark theme when their device prefers dark
-mode or when their local time is between 7 pm and 7 am; the sun/moon button in the header switches
-themes and remembers the choice in that browser. Colours for both themes are the variables at the top
+mode or when their local time is between 7 pm and 7 am; the switch in the header (sun on the left, moon on the right) overrides
+that and remembers the choice in that browser. Colours for both themes are the variables at the top
 of `assets/css/style.css`.
 
 ## Brand
