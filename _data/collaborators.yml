@@ -1,29 +1,29 @@
 # Collaborators shown on /collaborators/ as one list, in the order written here.
 # ---------------------------------------------------------------------------
-# Each entry: name, role (academic title), institution (department and university),
+# Each entry: name (add ", PhD" where it applies), role (academic title), institution (university only),
 # photo (square, 600 x 600 px recommended, saved in assets/img/collaborators/).
 # No personal links by design. An entry without a photo shows initials.
 # ---------------------------------------------------------------------------
 members:
-  - name: Li Jin
+  - name: Li Jin, PhD
     role: Associate Professor
-    institution: Department of Kinesiology, San José State University
-  - name: Weizhi Lin
+    institution: San José State University
+  - name: Weizhi Lin, PhD
     role: Assistant Professor
-    institution: Department of Industrial and Systems Engineering, San José State University
-  - name: Yue Luo
+    institution: San José State University
+  - name: Yue Luo, PhD
     role: Assistant Professor
-    institution: Department of Industrial and Systems Engineering, San José State University
-  - name: Kuo-Ken Huang
+    institution: San José State University
+  - name: Kuo-Ken Huang, PhD
     role: Lecturer
-    institution: Department of Electrical Engineering, San José State University
-  - name: Yuliang Sun
+    institution: San José State University
+  - name: Yuliang Sun, PhD
     role: Professor
-    institution: School of Physical Education, Shaanxi Normal University, Xi'an, China
+    institution: Shaanxi Normal University, Xi'an, China
     photo: /assets/img/collaborators/yuliang-sun.jpg
-  - name: Wenfei Zhu
+  - name: Wenfei Zhu, PhD
     role: Professor
-    institution: School of Physical Education, Shaanxi Normal University, Xi'an, China
+    institution: Shaanxi Normal University, Xi'an, China
   - name: Lei Jiang
     role: Associate Professor
     institution: Anhui Medical University, Hefei, China

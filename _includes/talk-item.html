@@ -1,11 +1,10 @@
 {%- assign t = include.talk -%}
 <li class="pub">
-  <span class="pub__authors">{{ t.authors | replace: "Qu H", "<strong>Qu H</strong>" }}</span>
-  ({{ t.year }}).
   <span class="pub__title">
     {%- if t.doi %}<a href="https://doi.org/{{ t.doi }}">{{ t.title }}</a>
     {%- elsif t.url %}<a href="{{ t.url }}">{{ t.title }}</a>
     {%- else %}{{ t.title }}{% endif -%}
   </span>
-  {% if t.kind %}{{ t.kind }}, {% endif %}<em class="pub__venue">{{ t.venue }}</em>.
+  <span class="pub__authors">{{ t.authors | replace: "Qu H", "<strong>Qu H</strong>" }}</span>
+  <span class="pub__where">{% if t.kind %}{{ t.kind }}, {% endif %}<em class="pub__venue">{{ t.venue }}</em>.</span>
 </li>

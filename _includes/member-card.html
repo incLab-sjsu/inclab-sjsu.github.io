@@ -1,5 +1,6 @@
 {%- assign p = include.person -%}
-{%- assign parts = p.name | split: " " -%}
+{%- assign bare = p.name | split: "," | first -%}
+{%- assign parts = bare | split: " " -%}
 {%- assign h = include.heading | default: "h3" -%}
 <li class="card member-card{% if p.placeholder %} member-card--placeholder{% endif %}">
   <div class="avatar" aria-hidden="true">

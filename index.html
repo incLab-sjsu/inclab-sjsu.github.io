@@ -4,7 +4,9 @@ body_class: home
 permalink: /
 ---
 <section class="hero night">
-  <img class="hero__mark" src="{{ '/assets/img/logo/incl-mark-gold.png' | relative_url }}" alt="" width="1000" height="649" aria-hidden="true">
+  <div class="hero__mark gild gild--gold" aria-hidden="true" style="--mask-url: url('{{ '/assets/img/logo/incl-mark-gold.png' | relative_url }}')">
+    <img class="gild__fallback" src="{{ '/assets/img/logo/incl-mark-gold.png' | relative_url }}" alt="" width="1000" height="649">
+  </div>
   <div class="container">
     <div class="hero__text">
       <p class="eyebrow">{{ site.contact.institution }} &middot; {{ site.contact.department }}</p>

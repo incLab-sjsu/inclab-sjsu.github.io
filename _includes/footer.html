@@ -1,10 +1,9 @@
 <footer class="site-footer night">
   <div class="container site-footer__grid">
     <div class="site-footer__brand">
-      <picture>
-        <source type="image/webp" srcset="{{ '/assets/img/logo/incl-horizontal-white-640.webp' | relative_url }} 640w, {{ '/assets/img/logo/incl-horizontal-white-1280.webp' | relative_url }} 1280w" sizes="260px">
-        <img src="{{ '/assets/img/logo/incl-horizontal-white-640.png' | relative_url }}" srcset="{{ '/assets/img/logo/incl-horizontal-white-640.png' | relative_url }} 640w, {{ '/assets/img/logo/incl-horizontal-white-1280.png' | relative_url }} 1280w" sizes="260px" alt="" width="640" height="224" loading="lazy">
-      </picture>
+      <div class="site-footer__logo gild gild--silver" aria-hidden="true" style="--mask-url: url('{{ '/assets/img/logo/incl-horizontal-white-640.png' | relative_url }}')">
+        <img class="gild__fallback" src="{{ '/assets/img/logo/incl-horizontal-white-640.png' | relative_url }}" alt="" width="640" height="224" loading="lazy">
+      </div>
       <p>{{ site.contact.department }}<br>{{ site.contact.institution }}</p>
     </div>
     <div>
@@ -26,7 +25,6 @@
         {%- for item in site.nav %}
         <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
         {%- endfor %}
-        <li><a href="{{ site.contact.scholar_url }}">Google Scholar</a></li>
         <li><a href="{{ site.contact.department_url }}">SJSU Kinesiology</a></li>
       </ul>
     </div>
