@@ -229,6 +229,16 @@ strong { font-weight: 700; }
 .member-card__meta { margin: 0; color: var(--ink-2); font-size: var(--step--1); }
 .member-card__bio { margin: 0.5rem 0 0; color: var(--ink-2); }
 .member-card__links { margin: 0.5rem 0 0; font-size: var(--step--1); }
+/* Two cards per row on phones for people and collaborators */
+@media (max-width: 640px) {
+  .grid--compact { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .grid--compact .member-card { padding: 1rem 0.85rem; gap: 0.75rem; }
+  .grid--compact .avatar { width: 84px; height: 84px; }
+  .grid--compact .avatar__initials { font-size: 1.5rem; }
+  .grid--compact .member-card__name { font-size: 1.05rem; overflow-wrap: anywhere; }
+  .grid--compact .member-card__role { font-size: 0.92rem; }
+  .grid--compact .member-card__meta { font-size: 0.85rem; }
+}
 .member-card--placeholder { border-style: dashed; box-shadow: none; background: transparent; }
 .member-card--placeholder .avatar { background: var(--bg-sunk); border-style: dashed; border-color: var(--rule); }
 .member-card--placeholder .member-card__name, .member-card--placeholder .member-card__role { color: var(--ink-2); }
