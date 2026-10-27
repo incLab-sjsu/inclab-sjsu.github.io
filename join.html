@@ -35,13 +35,12 @@ permalink: /join/
       <h2 id="contact-heading">Contact</h2>
       <address>
         <strong>{{ site.contact.pi_name }}</strong><br>
-        {{ site.contact.department }}<br>
         {{ site.contact.institution }}<br>
         {{ site.contact.office }}<br>
         {{ site.contact.address_line1 }}<br>
         {{ site.contact.address_line2 }}
       </address>
-      <p><a class="btn btn--primary" href="mailto:{{ site.contact.email }}">Email {{ site.contact.email }}</a></p>
+      <p><a class="btn btn--primary copy-btn" href="mailto:{{ site.contact.email }}" data-copy-email title="Click to copy the email address"><svg class="copy-btn__icon copy-btn__icon--copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><svg class="copy-btn__icon copy-btn__icon--done" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="copy-btn__text">{{ site.contact.email }}</span></a></p>
       {%- if site.contact.phone %}
       <p>Phone: {{ site.contact.phone }}</p>
       {%- endif %}

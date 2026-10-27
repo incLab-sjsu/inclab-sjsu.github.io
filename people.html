@@ -29,7 +29,7 @@ permalink: /people/
         {%- endfor %}
       </ul>
       <ul class="pi-profile__links">
-        <li><a href="mailto:{{ pi.email }}">{{ pi.email }}</a></li>
+        <li><a href="mailto:{{ pi.email }}" data-copy-email title="Click to copy the email address">{{ pi.email }}</a></li>
         <li>{{ pi.office }}</li>
         {%- for l in pi.links %}
         <li><a href="{{ l.url }}">{{ l.label }}</a></li>

@@ -66,3 +66,54 @@
   window.addEventListener('beforeprint', function () { before = root.getAttribute('data-theme'); apply('light'); });
   window.addEventListener('afterprint', function () { if (before) { apply(before); } });
 })();
+
+(function () {
+  var toast = null;
+  function announce(message) {
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'copy-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('is-visible');
+    clearTimeout(toast.hideTimer);
+    toast.hideTimer = setTimeout(function () { toast.classList.remove('is-visible'); }, 2400);
+  }
+  function legacyCopy(text) {
+    var area = document.createElement('textarea');
+    area.value = text; area.setAttribute('readonly', '');
+    area.style.position = 'fixed'; area.style.top = '-1000px'; area.style.opacity = '0';
+    document.body.appendChild(area); area.select(); area.setSelectionRange(0, text.length);
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(area);
+    return ok;
+  }
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return legacyCopy(text); });
+    }
+    return Promise.resolve(legacyCopy(text));
+  }
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest ? event.target.closest('a[href^="mailto:"]') : null;
+    if (!link) { return; }
+    event.preventDefault();
+    var address = decodeURIComponent(link.getAttribute('href').slice(7).split('?')[0]);
+    copyText(address).then(function (ok) {
+      if (!ok) { window.location.href = link.href; return; }
+      announce('Email copied: ' + address);
+      var label = link.querySelector('.copy-btn__text');
+      link.classList.add('is-copied');
+      if (label) { label.textContent = 'Email copied'; }
+      clearTimeout(link.copyTimer);
+      link.copyTimer = setTimeout(function () {
+        link.classList.remove('is-copied');
+        if (label) { label.textContent = address; }
+      }, 2400);
+    });
+  });
+})();

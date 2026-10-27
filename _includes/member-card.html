@@ -20,6 +20,6 @@
     {%- if p.years %}<p class="member-card__meta">{{ p.years }}</p>{% endif %}
     {%- if p.now %}<p class="member-card__meta">Now: {{ p.now }}</p>{% endif %}
     {%- if p.bio %}<p class="member-card__bio">{{ p.bio }}</p>{% endif %}
-    {%- if p.email %}<p class="member-card__links"><a href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+    {%- if p.email %}<p class="member-card__links"><a href="mailto:{{ p.email }}" data-copy-email title="Click to copy the email address">{{ p.email }}</a></p>{% endif %}
   </div>
 </li>

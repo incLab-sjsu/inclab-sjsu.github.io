@@ -10,7 +10,7 @@
       <h2 class="site-footer__heading">Contact</h2>
       <address>
         {{ site.contact.pi_name }}<br>
-        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a><br>
+        <a href="mailto:{{ site.contact.email }}" data-copy-email title="Click to copy the email address">{{ site.contact.email }}</a><br>
         {%- if site.contact.phone %}
         {{ site.contact.phone }}<br>
         {%- endif %}
@@ -31,7 +31,7 @@
   </div>
   <div class="container site-footer__meta">
     <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}, {{ site.contact.institution }}.
-      This site is built to meet WCAG 2.1 AA. If something is hard to use, email <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
+      This site is built to meet WCAG 2.1 AA. If something is hard to use, email <a href="mailto:{{ site.contact.email }}" data-copy-email title="Click to copy the email address">{{ site.contact.email }}</a>.</p>
   </div>
   </div>
 </footer>
