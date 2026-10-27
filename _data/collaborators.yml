@@ -42,8 +42,8 @@ members:
     institution: Hefei University, Hefei, China
     photo: /assets/img/collaborators/jialan-si.jpg
 
-# Map pins shown above the list: approximate city locations in decimal degrees. `home: true` marks the lab.
-# Pins carry no text; `name` is only for screen readers and for your own reference.
+# Map pins shown above the list: one pin per city (not per person), approximate coordinates in decimal degrees.
+# `home: true` marks the lab and gets the large gold pin. `name` is only for screen readers and your reference.
 pins:
   - name: San José, USA
     lat: 37.34

@@ -16,10 +16,20 @@ Land outline: Natural Earth via the world-atlas package (public domain), simplif
     {%- for p in pins %}
     {%- assign x = p.lon | plus: 180.0 | times: 2.7778 | round: 1 %}
     {%- assign y = 90.0 | minus: p.lat | times: 2.7778 | round: 1 %}
-    <g class="world-map__pin{% if p.home %} world-map__pin--home{% endif %}" transform="translate({{ x }} {{ y }})">
-      <circle class="world-map__halo" r="11"/>
+    {%- if p.home %}
+    <g class="world-map__pin world-map__pin--home" transform="translate({{ x }} {{ y }})">
+      <circle class="world-map__halo world-map__halo--a" r="16"/>
+      <circle class="world-map__halo world-map__halo--b" r="16"/>
+      <circle class="world-map__glow" r="13"/>
+      <circle class="world-map__dot" r="7"/>
+      <path class="world-map__spark" d="M0 -17L2.4 -2.4L17 0L2.4 2.4L0 17L-2.4 2.4L-17 0L-2.4 -2.4Z"/>
+    </g>
+    {%- else %}
+    <g class="world-map__pin" transform="translate({{ x }} {{ y }})">
+      <circle class="world-map__halo" r="10"/>
       <circle class="world-map__dot" r="4.5"/>
     </g>
+    {%- endif %}
     {%- endfor %}
   </svg>
 </figure>
