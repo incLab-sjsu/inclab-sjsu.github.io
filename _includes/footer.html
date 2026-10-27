@@ -1,4 +1,5 @@
 <footer class="site-footer night">
+  <div data-nosnippet>
   <div class="container site-footer__grid">
     <div class="site-footer__brand">
       <div class="site-footer__logo gild gild--silver" aria-hidden="true" style="--mask-url: url('{{ '/assets/img/logo/incl-horizontal-white-640.png' | relative_url }}')">
@@ -31,5 +32,6 @@
   <div class="container site-footer__meta">
     <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}, {{ site.contact.institution }}.
       This site is built to meet WCAG 2.1 AA. If something is hard to use, email <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
+  </div>
   </div>
 </footer>
