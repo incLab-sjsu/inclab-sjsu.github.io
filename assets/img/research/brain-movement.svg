@@ -1,9 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<circle cx="92" cy="92" r="56" fill="#DCE6F3" stroke="#0055A2" stroke-width="3"/>
-<path d="M66 80l26-22 30 24-24 32-32-14zM92 58l-6 36M122 82l-12 32" stroke="#E5A823" stroke-width="2"/>
-<circle cx="66" cy="80" r="5" fill="#E5A823"/><circle cx="92" cy="58" r="5" fill="#E5A823"/><circle cx="122" cy="82" r="5" fill="#E5A823"/><circle cx="98" cy="114" r="5" fill="#E5A823"/><circle cx="86" cy="94" r="4" fill="#0055A2"/><circle cx="110" cy="114" r="4" fill="#0055A2"/>
-<path d="M150 92h22l8-22 8 46 8-34 8 18 8-8h26" stroke="#0055A2" stroke-width="3"/>
-<ellipse cx="258" cy="80" rx="9" ry="14" fill="#E5A823" transform="rotate(-12 258 80)"/><circle cx="255" cy="62" r="4" fill="#E5A823"/>
-<ellipse cx="286" cy="118" rx="9" ry="14" fill="#0055A2" transform="rotate(-12 286 118)"/><circle cx="283" cy="100" r="4" fill="#0055A2"/>
-<path d="M30 168C80 150 130 186 180 168S280 150 310 168" stroke="#0055A2" stroke-width="2" opacity=".35"/>
+<circle cx="62" cy="60" r="26" fill="#DCE6F3" stroke="#0055A2" stroke-width="3"/>
+<path d="M39 50 A26 26 0 0 1 85 50" stroke="#0055A2" stroke-width="2" stroke-dasharray="3 4"/>
+<circle cx="44" cy="46" r="3.5" fill="#E5A823"/><circle cx="55" cy="37" r="3.5" fill="#E5A823"/><circle cx="69" cy="37" r="3.5" fill="#E5A823"/><circle cx="80" cy="46" r="3.5" fill="#E5A823"/>
+<path d="M80 46 C 92 46, 92 60, 104 60" stroke="#E5A823" stroke-width="1.5"/>
+<text x="46" y="106" font-family="Nunito Sans, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#0055A2">EEG</text>
+<path d="M104 60 h12 l4 -10 4 18 4 -14 4 10 4 -6 4 4 4 -8 4 8 4 -2 h10" stroke="#0055A2" stroke-width="2.5"/>
+<path d="M50 120 L64 150 L56 182 M56 182 H76" stroke="#0055A2" stroke-width="11" opacity=".2"/>
+<path d="M50 120 L64 150 L56 182 M56 182 H76" stroke="#0055A2" stroke-width="5"/>
+<rect x="49" y="126" width="18" height="11" rx="3" fill="#E5A823" stroke="#0B2A52" stroke-width="1.2" transform="rotate(64 58 131)"/>
+<circle cx="56" cy="128" r="1.5" fill="#0B2A52"/><circle cx="60" cy="135" r="1.5" fill="#0B2A52"/>
+<path d="M66 128 C 84 120, 84 142, 104 142" stroke="#E5A823" stroke-width="1.5"/>
+<text x="12" y="158" font-family="Nunito Sans, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#0055A2">EMG</text>
+<path d="M104 142 h10 l2 -12 2 24 2 -20 2 16 2 -26 2 30 2 -22 2 18 2 -12 2 8 2 -16 2 14 2 -8 2 4 h10" stroke="#0055A2" stroke-width="2.5"/>
+<path d="M182 100 H208 M202 94 l6 6 -6 6" stroke="#E5A823" stroke-width="3"/>
+<g transform="translate(262 146) scale(1.55)"><circle cx="0" cy="-58" r="8" fill="#0055A2"/><path d="M0 -48 L-2 -12" stroke="#0055A2" stroke-width="5"/><path d="M-2 -12 L-18 18 M-2 -12 L12 10 L10 28" stroke="#0055A2" stroke-width="5"/><path d="M-1 -42 L-16 -24 M-1 -42 L14 -30 L20 -20" stroke="#0055A2" stroke-width="5"/></g>
+<path d="M224 190 H300" stroke="#0055A2" stroke-width="2.5" opacity=".5"/>
 </svg>
