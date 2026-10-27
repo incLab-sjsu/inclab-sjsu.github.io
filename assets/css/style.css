@@ -222,8 +222,8 @@ strong { font-weight: 700; }
   .world-map__country { display: none; }
   .world-map__continent, .world-map__ocean, .world-map__keep { display: block; }
 }
-.world-map__dot { fill: var(--blue); stroke: #fff; stroke-width: 1.5; }
-.world-map__halo { fill: var(--blue); opacity: 0.25; transform-origin: center; transform-box: fill-box; animation: map-pulse 3s ease-out infinite; }
+.world-map__dot { fill: #F2C14E; stroke: #B07C14; stroke-width: 1.5; }
+.world-map__halo { fill: var(--gold); opacity: 0.3; transform-origin: center; transform-box: fill-box; animation: map-pulse 3s ease-out infinite; }
 /* Home pin (the lab): larger, gold, glowing, with a twinkling spark */
 .world-map__pin--home .world-map__dot { fill: #F2C14E; stroke: #B07C14; stroke-width: 2; }
 .world-map__pin--home .world-map__halo { fill: var(--gold); opacity: 0.35; animation-duration: 2.6s; }
