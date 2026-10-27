@@ -10,6 +10,7 @@ members:
     surname: Jin
     role: Associate Professor
     institution: San José State University
+    photo: /assets/img/collaborators/li-jin.jpg
   - name: Weizhi Lin, PhD
     surname: Lin
     role: Assistant Professor
@@ -40,23 +41,26 @@ members:
     role: Lecturer
     institution: Hefei University, Hefei, China
 
-# Map pins shown above the list: approximate city locations in decimal degrees.
-# `home: true` marks the lab. `anchor: end` puts the label to the left of the pin; dx/dy nudge the label.
+# Map pins shown above the list: approximate city locations in decimal degrees. `home: true` marks the lab.
+# Pins carry no text; `name` is only for screen readers and for your own reference.
 pins:
-  - label: San José, USA
+  - name: San José, USA
     lat: 37.34
     lon: -121.89
     home: true
-    dx: 10
-    dy: -8
-  - label: Xi'an, China
+  - name: Xi'an, China
     lat: 34.34
     lon: 108.94
-    anchor: end
-    dx: -10
-    dy: -8
-  - label: Hefei, China
+  - name: Hefei, China
     lat: 31.82
     lon: 117.23
-    dx: 10
-    dy: 20
+
+# Country names printed on the map (rough placement). `anchor: end` ends the text at the given point.
+countries:
+  - name: United States
+    lat: 41
+    lon: -96
+  - name: China
+    lat: 39
+    lon: 97
+    anchor: end

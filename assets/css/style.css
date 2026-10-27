@@ -219,12 +219,12 @@ strong { font-weight: 700; }
 .world-map__halo { fill: var(--gold); opacity: 0.25; transform-origin: center; transform-box: fill-box; animation: map-pulse 2.8s ease-out infinite; }
 .world-map__pin--home .world-map__dot { fill: var(--blue); stroke: var(--gold); stroke-width: 2; }
 .world-map__pin--home .world-map__halo { fill: var(--blue); }
-.world-map__label { font-family: var(--font); font-size: 13px; font-weight: 700; fill: var(--blue-ink); paint-order: stroke; stroke: #fff; stroke-width: 3px; stroke-linejoin: round; }
+.world-map__country { font-family: var(--font); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; fill: var(--ink-3); }
 @keyframes map-pulse { 0% { transform: scale(0.6); opacity: 0.45; } 100% { transform: scale(2.2); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .world-map__halo { animation: none; opacity: 0.2; } }
 @media (max-width: 640px) {
   .world-map { padding: 0.5rem; }
-  .world-map__label { font-size: 22px; stroke-width: 5px; }
+  .world-map__country { font-size: 20px; }
   .world-map__dot { r: 7; stroke-width: 2.5; }
   .world-map__halo { r: 16; }
 }
