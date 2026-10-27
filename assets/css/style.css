@@ -326,6 +326,8 @@ strong { font-weight: 700; }
 .theme-card p { margin: 0; color: var(--ink-2); }
 
 /* World map (collaborators) ---------------------------------------------- */
+.map-after { margin-top: 3rem; }
+.map-after .world-map { margin-bottom: 0; }
 .world-map { margin: 0 0 2.5rem; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1rem; }
 .world-map svg { display: block; width: 100%; height: auto; }
 .world-map__land { fill: var(--map-land); stroke: var(--map-land-stroke); stroke-width: 0.6; }

@@ -5,13 +5,15 @@ permalink: /publications/
 ---
 <section class="section">
   <div class="container">
-    {%- include world-map.html pins=site.data.conference_cities variant="conf" title="World map of conference cities where the lab's work has been presented" caption="Where our work has been presented" %}
     <div class="pub-columns">
       {%- include pub-column.html items=site.data.publications type="pub" heading="Journal articles and preprints" %}
       {%- assign talks = site.data.presentations %}
       {%- if talks and talks.size > 0 %}
       {%- include pub-column.html items=talks type="talk" heading="Conference presentations and posters" %}
       {%- endif %}
+    </div>
+    <div class="map-after">
+    {%- include world-map.html pins=site.data.conference_cities variant="conf" title="World map of conference cities where the lab's work has been presented" caption="Where our work has been presented" %}
     </div>
   </div>
 </section>

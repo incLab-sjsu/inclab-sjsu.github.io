@@ -6,7 +6,6 @@ permalink: /collaborators/
 ---
 <section class="section">
   <div class="container">
-    {%- include world-map.html %}
     {%- assign members = site.data.collaborators.members | sort_natural: "surname" %}
     {%- if members and members.size > 0 %}
     <ul class="grid grid--4 grid--compact cards">
@@ -17,5 +16,8 @@ permalink: /collaborators/
     {%- else %}
     <div class="empty-state"><p>Collaborators will be listed here.</p></div>
     {%- endif %}
+    <div class="map-after">
+    {%- include world-map.html %}
+    </div>
   </div>
 </section>
