@@ -40,6 +40,7 @@ members:
     surname: Si
     role: Lecturer
     institution: Hefei University, Hefei, China
+    photo: /assets/img/collaborators/jialan-si.jpg
 
 # Map pins shown above the list: approximate city locations in decimal degrees. `home: true` marks the lab.
 # Pins carry no text; `name` is only for screen readers and for your own reference.
