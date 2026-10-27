@@ -6,7 +6,7 @@ permalink: /collaborators/
 ---
 <section class="section">
   <div class="container">
-    {%- assign members = site.data.collaborators.members %}
+    {%- assign members = site.data.collaborators.members | sort_natural: "surname" %}
     {%- if members and members.size > 0 %}
     <ul class="grid grid--4 grid--compact cards">
       {%- for person in members %}

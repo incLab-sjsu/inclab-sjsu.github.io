@@ -1,32 +1,41 @@
-# Collaborators shown on /collaborators/ as one list, in the order written here.
+# Collaborators shown on /collaborators/ as one list, sorted alphabetically by `surname`.
 # ---------------------------------------------------------------------------
-# Each entry: name (add ", PhD" where it applies), role (academic title), institution (university only),
+# Each entry: name (add ", PhD" where it applies), surname (used for sorting), role (academic title),
+# institution (university only),
 # photo (square, 600 x 600 px recommended, saved in assets/img/collaborators/).
 # No personal links by design. An entry without a photo shows initials.
 # ---------------------------------------------------------------------------
 members:
   - name: Li Jin, PhD
+    surname: Jin
     role: Associate Professor
     institution: San José State University
   - name: Weizhi Lin, PhD
+    surname: Lin
     role: Assistant Professor
     institution: San José State University
   - name: Yue Luo, PhD
+    surname: Luo
     role: Assistant Professor
     institution: San José State University
   - name: Kuo-Ken Huang, PhD
+    surname: Huang
     role: Lecturer
     institution: San José State University
   - name: Yuliang Sun, PhD
+    surname: Sun
     role: Professor
     institution: Shaanxi Normal University, Xi'an, China
     photo: /assets/img/collaborators/yuliang-sun.jpg
   - name: Wenfei Zhu, PhD
+    surname: Zhu
     role: Professor
     institution: Shaanxi Normal University, Xi'an, China
   - name: Lei Jiang
+    surname: Jiang
     role: Associate Professor
     institution: Anhui Medical University, Hefei, China
   - name: Jialan Si
+    surname: Si
     role: Lecturer
     institution: Hefei University, Hefei, China
