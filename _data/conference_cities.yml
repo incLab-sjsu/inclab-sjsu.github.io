@@ -1,0 +1,17 @@
+# Cities where the lab's work has been presented, pinned on the map at the top of /publications/.
+# One entry per city, not per presentation. Approximate coordinates in decimal degrees.
+# Add a city the first time you present there; nothing else is needed.
+- { name: "Minneapolis, USA", lat: 44.98, lon: -93.27 }
+- { name: "Tokyo, Japan", lat: 35.68, lon: 139.69 }
+- { name: "San Diego, USA", lat: 32.72, lon: -117.16 }
+- { name: "Pittsburgh, USA", lat: 40.44, lon: -79.99 }
+- { name: "Stockholm, Sweden", lat: 59.33, lon: 18.07 }
+- { name: "Seattle, USA", lat: 47.61, lon: -122.33 }
+- { name: "Madison, USA", lat: 43.07, lon: -89.40 }
+- { name: "Boston, USA", lat: 42.36, lon: -71.06 }
+- { name: "Ames, USA", lat: 42.03, lon: -93.63 }
+- { name: "Fukuoka, Japan", lat: 33.59, lon: 130.40 }
+- { name: "Calgary, Canada", lat: 51.05, lon: -114.07 }
+- { name: "Eugene, USA", lat: 44.05, lon: -123.09 }
+- { name: "Taipei, Taiwan", lat: 25.03, lon: 121.57 }
+- { name: "Guilin, China", lat: 25.27, lon: 110.29 }
