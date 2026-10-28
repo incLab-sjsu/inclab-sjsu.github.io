@@ -8,10 +8,13 @@
   --bg-sunk: #ECEEF2;     /* quieter alternate sections */
   --band-bg: rgba(251, 251, 252, 0.55);
   --page-header-bg: linear-gradient(180deg, rgba(229, 168, 35, 0.08) 0%, rgba(244, 245, 247, 0) 100%);
-  --sky-glow: radial-gradient(900px 620px at 100% 0%, rgba(229, 168, 35, 0.13) 0%, rgba(229, 168, 35, 0) 70%),
-              radial-gradient(800px 560px at 0% 100%, rgba(229, 168, 35, 0.08) 0%, rgba(229, 168, 35, 0) 70%);
-  --star-min: 0.35;
-  --star-max: 0.95;
+  --sky-glow: radial-gradient(900px 620px at 100% 0%, rgba(229, 168, 35, 0.14) 0%, rgba(229, 168, 35, 0) 70%),
+              radial-gradient(760px 560px at 4% 34%, rgba(0, 85, 162, 0.06) 0%, rgba(0, 85, 162, 0) 70%),
+              radial-gradient(820px 600px at 96% 66%, rgba(229, 168, 35, 0.08) 0%, rgba(229, 168, 35, 0) 70%),
+              radial-gradient(800px 560px at 0% 100%, rgba(229, 168, 35, 0.09) 0%, rgba(229, 168, 35, 0) 70%);
+  --dust: 0.42;
+  --tw-min: 0.1;
+  --tw-max: 1;
   /* very faint paper grain, light theme only */
   --texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.16 0 0 0 0 0.26 0 0 0 0 0.42 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   --ink: #16213A;
@@ -84,10 +87,13 @@
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.35);
   --band-bg: rgba(22, 39, 70, 0.55);
   --page-header-bg: linear-gradient(180deg, rgba(229, 168, 35, 0.07) 0%, rgba(15, 27, 51, 0) 100%);
-  --sky-glow: radial-gradient(900px 620px at 100% 0%, rgba(229, 168, 35, 0.10) 0%, rgba(229, 168, 35, 0) 70%),
+  --sky-glow: radial-gradient(900px 620px at 100% 0%, rgba(229, 168, 35, 0.11) 0%, rgba(229, 168, 35, 0) 70%),
+              radial-gradient(900px 640px at 2% 30%, rgba(40, 70, 170, 0.22) 0%, rgba(40, 70, 170, 0) 70%),
+              radial-gradient(760px 560px at 98% 60%, rgba(90, 70, 160, 0.14) 0%, rgba(90, 70, 160, 0) 70%),
               radial-gradient(800px 560px at 0% 100%, rgba(0, 85, 162, 0.22) 0%, rgba(0, 85, 162, 0) 70%);
-  --star-min: 0.25;
-  --star-max: 0.85;
+  --dust: 0.7;
+  --tw-min: 0.18;
+  --tw-max: 1;
   --texture: none;
   color-scheme: dark;
 }
@@ -119,10 +125,13 @@
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.35);
   --band-bg: rgba(22, 39, 70, 0.55);
   --page-header-bg: linear-gradient(180deg, rgba(229, 168, 35, 0.07) 0%, rgba(15, 27, 51, 0) 100%);
-  --sky-glow: radial-gradient(900px 620px at 100% 0%, rgba(229, 168, 35, 0.10) 0%, rgba(229, 168, 35, 0) 70%),
+  --sky-glow: radial-gradient(900px 620px at 100% 0%, rgba(229, 168, 35, 0.11) 0%, rgba(229, 168, 35, 0) 70%),
+              radial-gradient(900px 640px at 2% 30%, rgba(40, 70, 170, 0.22) 0%, rgba(40, 70, 170, 0) 70%),
+              radial-gradient(760px 560px at 98% 60%, rgba(90, 70, 160, 0.14) 0%, rgba(90, 70, 160, 0) 70%),
               radial-gradient(800px 560px at 0% 100%, rgba(0, 85, 162, 0.22) 0%, rgba(0, 85, 162, 0) 70%);
-  --star-min: 0.25;
-  --star-max: 0.85;
+  --dust: 0.7;
+  --tw-min: 0.18;
+  --tw-max: 1;
   --texture: none;
   color-scheme: dark;
   }
@@ -142,23 +151,37 @@ body {
 }
 img, picture, svg { max-width: 100%; height: auto; display: block; }
 
-/* Page sky: soft gold glow and faint gold stars behind all content. Each layer breathes slowly and
-   out of step with the others, so stars brighten and fade gradually rather than blinking. */
+/* Page sky: a background that scrolls with the page. A faint, still field of star dust gives depth;
+   six layers of brighter stars each glow up slowly and fade again, out of step with one another, so
+   different stars are always rising and settling. Stars thin out behind the central reading column. */
 body { position: relative; }
 .sky { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; background: var(--sky-glow); }
 .sky span {
-  position: absolute; inset: 0; background-repeat: repeat; opacity: var(--star-min);
-  animation: sky-breathe 11s ease-in-out infinite alternate;
-  /* stars sit mainly in the side margins and fade out behind the central reading column */
-  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 8%, rgba(0, 0, 0, 0.12) 24%, rgba(0, 0, 0, 0.12) 76%, #000 92%, #000 100%);
-          mask-image: linear-gradient(90deg, #000 0%, #000 8%, rgba(0, 0, 0, 0.12) 24%, rgba(0, 0, 0, 0.12) 76%, #000 92%, #000 100%);
+  position: absolute; inset: 0; background-repeat: repeat;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 9%, rgba(0, 0, 0, 0.18) 25%, rgba(0, 0, 0, 0.18) 75%, #000 91%, #000 100%);
+          mask-image: linear-gradient(90deg, #000 0%, #000 9%, rgba(0, 0, 0, 0.18) 25%, rgba(0, 0, 0, 0.18) 75%, #000 91%, #000 100%);
 }
-@media (max-width: 760px) { .sky span { -webkit-mask-image: none; mask-image: none; opacity: calc(var(--star-min) * 0.6); animation: none; } }
-.sky__a { background-image: url("../img/sky-a.svg"); background-size: 640px 640px; animation-duration: 9s; }
-.sky__b { background-image: url("../img/sky-b.svg"); background-size: 880px 880px; background-position: 210px 140px; animation-duration: 13s; animation-delay: -5s; }
-.sky__c { background-image: url("../img/sky-c.svg"); background-size: 1120px 1120px; background-position: 470px 330px; animation-duration: 17s; animation-delay: -11s; }
-@keyframes sky-breathe { from { opacity: var(--star-min); } to { opacity: var(--star-max); } }
-@media (prefers-reduced-motion: reduce) { .sky span { animation: none; opacity: calc((var(--star-min) + var(--star-max)) / 2); } }
+.sky__dust { background-image: url("../img/sky-dust.svg"); background-size: 420px 420px; opacity: var(--dust); }
+.sky__t { opacity: var(--tw-min); will-change: opacity; animation: sky-twinkle 11s ease-in-out infinite; }
+.sky__t1 { background-image: url("../img/sky-t1.svg"); background-size: 523px 523px; animation-duration: 7.3s; animation-delay: -1.2s; }
+.sky__t2 { background-image: url("../img/sky-t2.svg"); background-size: 617px 617px; background-position: 140px 260px; animation-duration: 9.1s; animation-delay: -6.4s; }
+.sky__t3 { background-image: url("../img/sky-t3.svg"); background-size: 709px 709px; background-position: 380px 90px; animation-duration: 11.7s; animation-delay: -3.1s; }
+.sky__t4 { background-image: url("../img/sky-t4.svg"); background-size: 811px 811px; background-position: 60px 470px; animation-duration: 13.3s; animation-delay: -9.8s; }
+.sky__t5 { background-image: url("../img/sky-t5.svg"); background-size: 919px 919px; background-position: 520px 330px; animation-duration: 15.9s; animation-delay: -12.5s; }
+.sky__t6 { background-image: url("../img/sky-t6.svg"); background-size: 1031px 1031px; background-position: 270px 610px; animation-duration: 18.7s; animation-delay: -5.6s; }
+/* each layer rests dim, rises slowly to full glow, then settles back: a long, soft twinkle */
+@keyframes sky-twinkle {
+  0%, 38% { opacity: var(--tw-min); }
+  56% { opacity: var(--tw-max); }
+  76%, 100% { opacity: var(--tw-min); }
+}
+@media (max-width: 760px) {
+  .sky span { -webkit-mask-image: none; mask-image: none; }
+  .sky__dust { opacity: calc(var(--dust) * 0.6); }
+  .sky__t { --tw-max: 0.45; }
+  .sky__t4, .sky__t5, .sky__t6 { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .sky__t { animation: none; opacity: calc((var(--tw-min) + var(--tw-max)) / 2); } }
 a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
 a:hover { color: var(--blue-deep); }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
