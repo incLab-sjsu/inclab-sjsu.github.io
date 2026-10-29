@@ -15,6 +15,12 @@
   --dust: 0.42;
   --tw-min: 0.1;
   --tw-max: 1;
+  /* Milky Way band */
+  --mw-glow: url("../img/sky-galaxy-light.webp");
+  --mw-star: #C9921C;
+  --mw-star-op: 0.75;
+  --mw-mid: 0.6;
+  --card-bg: rgba(251, 251, 252, 0.9);   /* cards let the sky show through faintly */
   /* very faint paper grain, light theme only */
   --texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.16 0 0 0 0 0.26 0 0 0 0 0.42 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   --ink: #16213A;
@@ -66,7 +72,7 @@
   --bg-sunk: #0B1630;
   --ink: #E8EEF7;
   --ink-2: #B9C6DA;
-  --ink-3: #94A4BE;
+  --ink-3: #A7B5CB;
   --rule: #2B3E62;
   --blue: #7FB6F0;
   --blue-deep: #A9CFF7;
@@ -94,6 +100,11 @@
   --dust: 0.7;
   --tw-min: 0.18;
   --tw-max: 1;
+  --mw-glow: url("../img/sky-galaxy-dark.webp");
+  --mw-star: linear-gradient(120deg, #DCE6FF 0%, #FFF3DA 45%, #E6EEFF 100%);
+  --mw-star-op: 1;
+  --mw-mid: 0.5;
+  --card-bg: rgba(22, 39, 70, 0.9);
   --texture: none;
   color-scheme: dark;
 }
@@ -104,7 +115,7 @@
   --bg-sunk: #0B1630;
   --ink: #E8EEF7;
   --ink-2: #B9C6DA;
-  --ink-3: #94A4BE;
+  --ink-3: #A7B5CB;
   --rule: #2B3E62;
   --blue: #7FB6F0;
   --blue-deep: #A9CFF7;
@@ -132,6 +143,11 @@
   --dust: 0.7;
   --tw-min: 0.18;
   --tw-max: 1;
+  --mw-glow: url("../img/sky-galaxy-dark.webp");
+  --mw-star: linear-gradient(120deg, #DCE6FF 0%, #FFF3DA 45%, #E6EEFF 100%);
+  --mw-star-op: 1;
+  --mw-mid: 0.5;
+  --card-bg: rgba(22, 39, 70, 0.9);
   --texture: none;
   color-scheme: dark;
   }
@@ -151,12 +167,13 @@ body {
 }
 img, picture, svg { max-width: 100%; height: auto; display: block; }
 
-/* Page sky: a background that scrolls with the page. A faint, still field of star dust gives depth;
-   six layers of brighter stars each glow up slowly and fade again, out of step with one another, so
-   different stars are always rising and settling. Stars thin out behind the central reading column. */
+/* Page sky: a background that scrolls with the page. A Milky Way band crosses the upper part of the page;
+   a faint, still field of star dust gives depth; six layers of brighter stars each glow up slowly and fade
+   again, out of step with one another, so different stars are always rising and settling. Everything thins
+   out behind the central reading column. */
 body { position: relative; }
 .sky { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; background: var(--sky-glow); }
-.sky span {
+.sky > span {
   position: absolute; inset: 0; background-repeat: repeat;
   -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 9%, rgba(0, 0, 0, 0.18) 25%, rgba(0, 0, 0, 0.18) 75%, #000 91%, #000 100%);
           mask-image: linear-gradient(90deg, #000 0%, #000 9%, rgba(0, 0, 0, 0.18) 25%, rgba(0, 0, 0, 0.18) 75%, #000 91%, #000 100%);
@@ -169,6 +186,23 @@ body { position: relative; }
 .sky__t4 { background-image: url("../img/sky-t4.svg"); background-size: 811px 811px; background-position: 60px 470px; animation-duration: 13.3s; animation-delay: -9.8s; }
 .sky__t5 { background-image: url("../img/sky-t5.svg"); background-size: 919px 919px; background-position: 520px 330px; animation-duration: 15.9s; animation-delay: -12.5s; }
 .sky__t6 { background-image: url("../img/sky-t6.svg"); background-size: 1031px 1031px; background-position: 270px 610px; animation-duration: 18.7s; animation-delay: -5.6s; }
+.sky .sky__galaxy {
+  bottom: auto; height: 2000px;
+  /* full strength in the side margins, dimmed behind the content column (max 1120px) so text keeps its contrast */
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(50% - 720px), rgba(0, 0, 0, var(--mw-mid)) calc(50% - 560px), rgba(0, 0, 0, var(--mw-mid)) calc(50% + 560px), #000 calc(50% + 720px));
+          mask-image: linear-gradient(90deg, #000 calc(50% - 720px), rgba(0, 0, 0, var(--mw-mid)) calc(50% - 560px), rgba(0, 0, 0, var(--mw-mid)) calc(50% + 560px), #000 calc(50% + 720px));
+}
+/* the band's glow, its dense star grain and a few brighter stars all share one 2400 x 2000 frame */
+.sky__mw { position: absolute; inset: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 0; }
+.sky__mw-glow { background-image: var(--mw-glow); }
+.sky__mw-stars {
+  background: var(--mw-star); opacity: var(--mw-star-op);
+  -webkit-mask: url("../img/sky-galaxy-stars.svg") 50% 0 / cover no-repeat;
+          mask: url("../img/sky-galaxy-stars.svg") 50% 0 / cover no-repeat;
+}
+.sky__mw-tw { opacity: var(--tw-min); will-change: opacity; animation: sky-twinkle 14.3s ease-in-out infinite; }
+.sky__mw-tw1 { background-image: url("../img/sky-galaxy-tw1.svg"); animation-delay: -4.1s; }
+.sky__mw-tw2 { background-image: url("../img/sky-galaxy-tw2.svg"); animation-duration: 19.9s; animation-delay: -13.7s; }
 /* each layer rests dim, rises slowly to full glow, then settles back: a long, soft twinkle */
 @keyframes sky-twinkle {
   0%, 38% { opacity: var(--tw-min); }
@@ -176,12 +210,13 @@ body { position: relative; }
   76%, 100% { opacity: var(--tw-min); }
 }
 @media (max-width: 760px) {
-  .sky span { -webkit-mask-image: none; mask-image: none; }
+  .sky > span { -webkit-mask-image: none; mask-image: none; }
+  .sky .sky__galaxy { opacity: 0.5; }
   .sky__dust { opacity: calc(var(--dust) * 0.6); }
   .sky__t { --tw-max: 0.45; }
   .sky__t4, .sky__t5, .sky__t6 { display: none; }
 }
-@media (prefers-reduced-motion: reduce) { .sky__t { animation: none; opacity: calc((var(--tw-min) + var(--tw-max)) / 2); } }
+@media (prefers-reduced-motion: reduce) { .sky__t, .sky__mw-tw { animation: none; opacity: calc((var(--tw-min) + var(--tw-max)) / 2); } }
 a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
 a:hover { color: var(--blue-deep); }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
@@ -374,7 +409,7 @@ strong { font-weight: 700; }
 .grid { display: grid; gap: 1.25rem; list-style: none; padding: 0; margin: 0; }
 .grid--3 { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
 .grid--4 { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
-.card { background: var(--bg-elev); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); }
+.card { background: var(--card-bg); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); }
 .theme-card { position: relative; display: flex; flex-direction: column; gap: 0.25rem; border-top: 4px solid var(--gold); }
 .theme-card__art { margin: -0.25rem 0 0.75rem; background: var(--art-bg); border-radius: 10px; padding: 0.6rem 0.9rem; }
 .theme-card__art img { height: 78px; width: auto; margin-inline: auto; }
@@ -387,7 +422,7 @@ strong { font-weight: 700; }
 /* World map (collaborators) ---------------------------------------------- */
 .map-after { margin-top: 3rem; }
 .map-after .world-map { margin-bottom: 0; }
-.world-map { margin: 0 0 2.5rem; background: var(--bg-elev); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1rem; }
+.world-map { margin: 0 0 2.5rem; background: var(--card-bg); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1rem; }
 .world-map svg { display: block; width: 100%; height: auto; }
 .world-map__land { fill: var(--map-land); stroke: var(--map-land-stroke); stroke-width: 0.6; }
 .world-map__borders { fill: none; stroke: var(--map-borders); stroke-width: 0.45; opacity: 0.55; }
@@ -467,7 +502,7 @@ strong { font-weight: 700; }
 .member-card--placeholder .avatar { background: var(--bg-sunk); border-style: dashed; border-color: var(--rule); }
 .member-card--placeholder .member-card__name, .member-card--placeholder .member-card__role { color: var(--ink-2); }
 
-.empty-state { border: 1px dashed var(--rule); background: var(--bg-elev); border-radius: var(--radius); padding: 1.5rem; max-width: 70ch; color: var(--ink-2); }
+.empty-state { border: 1px dashed var(--rule); background: var(--card-bg); border-radius: var(--radius); padding: 1.5rem; max-width: 70ch; color: var(--ink-2); }
 .empty-state p { margin: 0; }
 
 /* PI teaser (home) and profile (people) ---------------------------------- */
@@ -483,7 +518,7 @@ strong { font-weight: 700; }
 
 /* Research page themes ---------------------------------------------------- */
 .theme-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.5rem; }
-.theme { background: var(--bg-elev); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(1.5rem, 4vw, 2.5rem); scroll-margin-top: 6rem; }
+.theme { background: var(--card-bg); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(1.5rem, 4vw, 2.5rem); scroll-margin-top: 6rem; }
 .theme--with-art { display: grid; gap: 1.5rem; align-items: center; }
 @media (min-width: 760px) { .theme--with-art { grid-template-columns: 1fr 300px; gap: 2.5rem; } .theme__art { order: 2; } }
 .theme__art { background: var(--art-bg); border-radius: var(--radius); padding: 1.25rem; }
@@ -537,7 +572,7 @@ strong { font-weight: 700; }
 /* Join page -------------------------------------------------------------- */
 .join-grid { display: grid; gap: 2.5rem; align-items: start; }
 @media (min-width: 900px) { .join-grid { grid-template-columns: 1fr 320px; gap: 4rem; } }
-.contact-card { background: var(--bg-elev); border: 1px solid var(--rule); border-top: 4px solid var(--gold); border-radius: var(--radius); padding: 1.5rem; position: sticky; top: 6rem; box-shadow: var(--shadow); }
+.contact-card { background: var(--card-bg); border: 1px solid var(--rule); border-top: 4px solid var(--gold); border-radius: var(--radius); padding: 1.5rem; position: sticky; top: 6rem; box-shadow: var(--shadow); }
 .contact-card h2 { font-size: var(--step-1); margin-bottom: 0.75rem; }
 .contact-card address { margin-bottom: 1rem; }
 .contact-card .btn { word-break: break-all; }
