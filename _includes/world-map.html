@@ -3,7 +3,8 @@ World map (equirectangular, 1000 px wide, 2.7778 px per degree).
 Parameters: pins (list of {name, lat, lon, home}), title (for screen readers), caption (optional), variant (optional, e.g. "conf").
 Defaults to the collaborator pins. Labels come from _data/map.yml.
 Land outline and country borders: Natural Earth via the world-atlas package (public domain), simplified to 110 m.
-Country names show on wide screens; on narrow screens only continents, oceans, and entries marked keep: true.
+Country names show on wide screens; on tablets only continents, oceans, and entries marked keep: true; on phones only continents.
+Labels are drawn after the pins so their halos keep them readable over a pin's glow.
 {%- endcomment -%}
 {%- assign pins = include.pins | default: site.data.collaborators.pins -%}
 {%- assign map_title = include.title | default: "World map showing the lab in San José and collaborators' cities" -%}
@@ -13,11 +14,6 @@ Country names show on wide screens; on narrow screens only continents, oceans, a
     <title id="world-map-title-{{ include.variant | default: 'main' }}">{{ map_title }}: {% for p in pins %}{{ p.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}</title>
     <path class="world-map__land" d="{% include map/land-path.txt %}"/>
     <path class="world-map__borders" d="{% include map/borders-path.txt %}"/>
-    {%- for c in site.data.map.countries %}
-    {%- assign cx = c.lon | plus: 180.0 | times: 2.7778 | round: 1 %}
-    {%- assign cy = 90.0 | minus: c.lat | times: 2.7778 | round: 1 %}
-    <text class="world-map__country{% if c.kind == 'ocean' %} world-map__ocean{% elsif c.kind == 'continent' %} world-map__continent{% endif %}{% if c.keep %} world-map__keep{% endif %}" x="{{ cx }}" y="{{ cy }}" text-anchor="{{ c.anchor | default: 'middle' }}">{{ c.name }}</text>
-    {%- endfor %}
     {%- for p in pins %}
     {%- assign x = p.lon | plus: 180.0 | times: 2.7778 | round: 1 %}
     {%- assign y = 90.0 | minus: p.lat | times: 2.7778 | round: 1 %}
@@ -35,6 +31,11 @@ Country names show on wide screens; on narrow screens only continents, oceans, a
       <circle class="world-map__dot" r="4.5"/>
     </g>
     {%- endif %}
+    {%- endfor %}
+    {%- for c in site.data.map.countries %}
+    {%- assign cx = c.lon | plus: 180.0 | times: 2.7778 | round: 1 %}
+    {%- assign cy = 90.0 | minus: c.lat | times: 2.7778 | round: 1 %}
+    <text class="world-map__country{% if c.kind == 'ocean' %} world-map__ocean{% elsif c.kind == 'continent' %} world-map__continent{% endif %}{% if c.keep %} world-map__keep{% endif %}" x="{{ cx }}" y="{{ cy }}" text-anchor="{{ c.anchor | default: 'middle' }}">{{ c.name }}</text>
     {%- endfor %}
   </svg>
   {%- if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}

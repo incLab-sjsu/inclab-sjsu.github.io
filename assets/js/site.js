@@ -48,6 +48,21 @@
     if (btn) { btn.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false'); }
   }
   apply(root.getAttribute('data-theme') || 'light');
+  /* fetch the other theme's star tiles ahead of the first switch, so the sky never blinks empty */
+  var warmed = false;
+  function warm() {
+    if (warmed) { return; }
+    warmed = true;
+    var other = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    ['dust', 't1', 't2', 't3', 't4', 't5', 't6'].forEach(function (n) { new Image().src = '/assets/img/sky-' + n + '-' + other + '.svg'; });
+    new Image().src = '/assets/img/sky-galaxy-' + other + '.webp';
+  }
+  if (btn) {
+    ['pointerenter', 'focus', 'touchstart'].forEach(function (ev) { btn.addEventListener(ev, warm, { once: true, passive: true }); });
+  }
+  window.addEventListener('load', function () {
+    if (window.requestIdleCallback) { window.requestIdleCallback(warm, { timeout: 4000 }); } else { setTimeout(warm, 3000); }
+  });
   if (btn) {
     btn.addEventListener('click', function () {
       var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';

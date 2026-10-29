@@ -25,6 +25,7 @@ members:
     surname: Zhu
     role: Professor
     institution: Shaanxi Normal University
+    photo: /assets/img/collaborators/wenfei-zhu.jpg
   - name: Lei Jiang
     surname: Jiang
     role: Associate Professor
