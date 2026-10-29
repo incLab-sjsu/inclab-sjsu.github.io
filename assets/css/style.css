@@ -16,7 +16,6 @@
   --tw-min: 0.1;
   --tw-max: 1;
   /* Milky Way band */
-  --mw-glow: url("../img/sky-galaxy-light.webp");
   --mw-star: #C9921C;
   --mw-star-op: 0.75;
   --mw-mid: 0.6;
@@ -100,7 +99,6 @@
   --dust: 0.7;
   --tw-min: 0.18;
   --tw-max: 1;
-  --mw-glow: url("../img/sky-galaxy-dark.webp");
   --mw-star: linear-gradient(120deg, #DCE6FF 0%, #FFF3DA 45%, #E6EEFF 100%);
   --mw-star-op: 1;
   --mw-mid: 0.5;
@@ -143,7 +141,6 @@
   --dust: 0.7;
   --tw-min: 0.18;
   --tw-max: 1;
-  --mw-glow: url("../img/sky-galaxy-dark.webp");
   --mw-star: linear-gradient(120deg, #DCE6FF 0%, #FFF3DA 45%, #E6EEFF 100%);
   --mw-star-op: 1;
   --mw-mid: 0.5;
@@ -186,15 +183,20 @@ body { position: relative; }
 .sky__t4 { background-image: url("../img/sky-t4.svg"); background-size: 811px 811px; background-position: 60px 470px; animation-duration: 13.3s; animation-delay: -9.8s; }
 .sky__t5 { background-image: url("../img/sky-t5.svg"); background-size: 919px 919px; background-position: 520px 330px; animation-duration: 15.9s; animation-delay: -12.5s; }
 .sky__t6 { background-image: url("../img/sky-t6.svg"); background-size: 1031px 1031px; background-position: 270px 610px; animation-duration: 18.7s; animation-delay: -5.6s; }
-.sky .sky__galaxy {
-  bottom: auto; height: 2000px;
+.sky .sky__galaxy, .sky .sky__mw-tw {
+  /* one 2400 x 2000 frame, never cropped at the bottom (where the band fades out), so it has no hard edge */
+  bottom: auto; height: max(2000px, 83.334vw);
+  background-repeat: no-repeat; background-size: cover; background-position: 50% 0;
   /* full strength in the side margins, dimmed behind the content column (max 1120px) so text keeps its contrast */
   -webkit-mask-image: linear-gradient(90deg, #000 calc(50% - 720px), rgba(0, 0, 0, var(--mw-mid)) calc(50% - 560px), rgba(0, 0, 0, var(--mw-mid)) calc(50% + 560px), #000 calc(50% + 720px));
           mask-image: linear-gradient(90deg, #000 calc(50% - 720px), rgba(0, 0, 0, var(--mw-mid)) calc(50% - 560px), rgba(0, 0, 0, var(--mw-mid)) calc(50% + 560px), #000 calc(50% + 720px));
 }
-/* the band's glow, its dense star grain and a few brighter stars all share one 2400 x 2000 frame */
+/* the band's glow, its dense star grain and a few brighter stars all share that frame; the twinkling stars
+   sit beside the galaxy rather than inside it, so animating them never re-renders the masked band */
 .sky__mw { position: absolute; inset: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 0; }
-.sky__mw-glow { background-image: var(--mw-glow); }
+.sky__mw-glow { background-image: url("../img/sky-galaxy-light.webp"); }
+:root[data-theme="dark"] .sky__mw-glow { background-image: url("../img/sky-galaxy-dark.webp"); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sky__mw-glow { background-image: url("../img/sky-galaxy-dark.webp"); } }
 .sky__mw-stars {
   background: var(--mw-star); opacity: var(--mw-star-op);
   -webkit-mask: url("../img/sky-galaxy-stars.svg") 50% 0 / cover no-repeat;
@@ -210,8 +212,9 @@ body { position: relative; }
   76%, 100% { opacity: var(--tw-min); }
 }
 @media (max-width: 760px) {
-  .sky > span { -webkit-mask-image: none; mask-image: none; }
+  .sky > span, .sky .sky__galaxy, .sky .sky__mw-tw { -webkit-mask-image: none; mask-image: none; }
   .sky .sky__galaxy { opacity: 0.5; }
+  .sky .sky__mw-tw { --tw-min: 0.08; --tw-max: 0.5; }
   .sky__dust { opacity: calc(var(--dust) * 0.6); }
   .sky__t { --tw-max: 0.45; }
   .sky__t4, .sky__t5, .sky__t6 { display: none; }
